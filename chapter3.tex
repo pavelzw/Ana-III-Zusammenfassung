@@ -1,0 +1,55 @@
+\section*{\(\sigma\)-Algebren und ihre Erzeuger}
+
+\begin{karte}{\(\sigma\)-Algebra}
+	Ein System \(\mathcal{A} \subset \mathcal{P}(X)\) (\(\mathcal{A}\) System von Teilmengen von \(X\)) 
+	heißt \(\sigma\)-Algebra, falls 
+	\begin{itemize}
+		\item \( X \in \mathcal{A} \).
+		\item \( A \in \mathcal{A} \Rightarrow A^C \in \mathcal{A} \).
+		\item \(\forall\) Folgen \( (A_n)_n \subset \mathcal{A} \) ist 
+		\( \bigcup_{n=1}^\infty A_n \in A \). 
+	\end{itemize}
+	Eine Menge \(A \in \mathcal{A}\) heißt \(\mathcal{A}\)-messbar.
+\end{karte}
+
+\begin{karte}{Eigenschaften von \(\sigma\)-Algebren}
+	Sei \(\mathcal{A}\) eine \(\sigma\)-Algebra in \(X\). Dann gilt 
+	\begin{enumerate}
+		\item \(\emptyset \in \mathcal{A}\).
+		\item \( A_1, \ldots, A_n \in \mathcal{A}\Rightarrow \bigcup_{j=1}^n A_j \in A \) (stabil unter endlicher Vereinigung)
+		\item \( (A_n)_n \subset \mathcal{A} \Rightarrow \bigcap_{n\in\N} A_n \in \mathcal{A} \) (stabil unter abzählbarem Schnitt)
+	\end{enumerate}
+\end{karte}
+
+\begin{karte}{Spur-\(\sigma\)-Algebra}
+	Sei \(\mathcal{A} \subset \mathcal{P}(X)\) eine \(\sigma\)-Algebra und \(\tilde{X} \subset X\) 
+	\( \Rightarrow \tilde{A} := \set{ A \cap \tilde{X} \;\vert\; A \in \mathcal{A} } \) ist eine 
+	\(\sigma\)-Algebra in \(\tilde{X}\).
+\end{karte}
+
+\begin{karte}{Familie von \(\sigma\)-Algebren}
+	Sei \(J\) eine beliebige Indexmenge. 
+	\((A_j)_{j\in J}\) eine beliebige Familie von 
+	\(\sigma\)-Algebren in einer Menge \(X\).
+	\[ \Rightarrow \mathcal{A} = \bigcap_{j\in J} \mathcal{A}_j \text{ ist eine \(\sigma\)-Algebra in } X. \]
+\end{karte}
+
+\begin{karte}{Erzeugte \(\sigma\)-Algebra}
+	Sei \( \mathcal{E} \subset \mathcal{P}(X) \). Dann existiert eine kleinste \(\sigma\)-Algebra \( \sigma(\mathcal{E}) \subset \mathcal{P}(X) \) mit 
+	\begin{enumerate}
+		\item \(\mathcal{E} \subset \sigma(\mathcal{E})\)
+		\item \(\forall\; \sigma\)-Algebren: \(\forall \; \mathcal{A} \subset \mathcal{P}(X) \) mit \( \mathcal{E} \subset \mathcal{A} \) gilt \(\sigma(\mathcal{E}) \subset \mathcal{A}\).
+	\end{enumerate}
+	Wir nennen \(\sigma(\mathcal{E})\) die von \(\mathcal{E}\) den Erzeuger von \(\sigma(\mathcal{E})\).
+\end{karte}
+
+\begin{karte}{Borelsche \(\sigma\)-Algebra}
+	Sei \(X\) ein topologischer Raum mit der Topologie der offenen Mengen \(\mathcal{O}\). 
+	Die \(\sigma\)-Algebra \(\sigma(\mathcal{O})\), 
+	die von den offenen Mengen erzeugt wird, heißt Borel \(\sigma\)-Algebra und ihre Elemente Borelmengen. 
+	Wir schreiben \(\mathcal{B}(X) := \mathcal{B}(\mathcal{O}) := \sigma(\mathcal{O})\). 
+	Und \(\mathcal{B}(\R^d)\) oder \(\mathcal{B}^d\) 
+	Borelmengen in \(\R^d\).\\
+	Seien \( \mathcal{O}^d, \mathcal{C}^d, \mathcal{K}^d \) die offenen, abgeschlossenen und kompakten Mengen in \(\R^d\). 
+	Dann gilt \( \mathcal{B}(\R^d) = \sigma(\mathcal{O}^d) = \sigma(\mathcal{C}^d) = \sigma(\mathcal{K}^d) \).
+\end{karte}

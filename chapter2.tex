@@ -1,0 +1,39 @@
+\section*{Mengentheoretische Grundlagen}
+
+\begin{karte}{Eigenschaften injektiver Funktionen}
+    \[ \abb{f}{X}{Y} \text{ ist injektiv } 
+    \Leftrightarrow f(A \cap B) = f(A) \cap f(B) \;\forall A, B \subset X 
+    \Leftrightarrow f(X \setminus A) = f(X) \setminus f(A). \]
+\end{karte}
+
+\begin{karte}{Limes superior/inferior bei Mengen}
+	Ist \((A_n)_n \subset \mathcal{P}(X) \), so heißt 
+	\begin{itemize}
+		\item \( \limessup{n} A_n := \lowlimes{n} A_n := \set{ x \in X: x \in A_n 
+			\text{ für unendlich viele } n\in\N } \).
+		\item \( \limesinf{n} A_n := \uplimes{n} A_n := \set{ x \in X: \exists N_0(x): x \in A_n 
+			\forall n \geq N_0(x) } \).
+	\end{itemize}
+	Es gilt
+	\[ \uplimes{n} A_n = \bigcap_{n\in\N} \bigcup_{k \geq n}A_k, 
+	\qquad \lowlimes{n} A_n = \bigcup_{n\in\N} \bigcap_{k\geq n} A_k. \]
+	Es gilt außerdem immer \(\lowlimes{n} A_n \subset \uplimes{n} A_n \).
+\end{karte}
+
+\begin{karte}{Konvergenz Mengenfolgen}
+	\(A_n\) konvergiert, falls \(\uplimes{n} A_n = \lowlimes{n} A_n\). \\
+	In diesem Fall nennen wir \(A := \limes{n} A_n = \uplimes{n} A_n = \lowlimes{n} A_n \) Grenzwert.\\
+	Wir nennen \((A_n)_n\) 
+	\begin{description}
+		\item[wachsend,] wenn \( A_n \subset A_{n+1} \;\forall n \in \N \).
+		\item[fallend,] wenn \( A_{n+1} \subset A_n \;\forall n \in \N \).
+	\end{description}
+\end{karte}
+
+\begin{karte}{Monotone Konvergenz von Mengen}
+	Jede monotone Folge \( (A_n)_n \subset X \) konvergiert. Es gilt 
+	\begin{itemize}
+		\item \( \limes{n} A_n = \bigcup_{n\in\N} A_n \), falls \( (A_n)_n \) wachsend ist.
+		\item \( \limes{n} A_n = \bigcap_{n\in\N} A_n \), falls \( (A_n)_n \) fallend ist.
+	\end{itemize}
+\end{karte}

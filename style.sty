@@ -5,7 +5,6 @@
 \RequirePackage{graphicx} %Grafiken einbinden
 \RequirePackage{amsmath,amssymb,amsthm}
 \RequirePackage{dsfont}
-\RequirePackage{subfiles}
 \RequirePackage{mathrsfs}
 \RequirePackage{arydshln}
 \RequirePackage{tikz}
@@ -41,6 +40,10 @@
 \newcommand{\limesx}[2]{\lim\limits_{#1\rightarrow #2}}
 \newcommand{\limessup}[1]{\limsup\limits_{#1\rightarrow\infty}}
 \newcommand{\limesinf}[1]{\liminf\limits_{#1\rightarrow\infty}}
+\DeclareMathOperator*\lowlim{\underline{lim}}
+\DeclareMathOperator*\uplim{\overline{lim}}
+\newcommand{\lowlimes}[1]{\lowlim\limits_{#1\rightarrow\infty}}
+\newcommand{\uplimes}[1]{\uplim\limits_{#1\rightarrow\infty}}
 \newcommand{\obda}{o.\ B.\ d.\ A.}
 \DeclareMathOperator{\Abb}{Abb}
 \DeclareMathOperator{\injektiv}{injektiv}

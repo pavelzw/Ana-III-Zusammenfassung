@@ -1,0 +1,25 @@
+\documentclass[a6paper,11pt,print,grid=front]{kartei/kartei}
+\input{style.sty}
+
+% Vorlage für chapter[x].tex
+%
+% \documentclass[main.tex]{subfiles}
+% \begin{document}
+%
+% \section*{...}
+% \subsection*{...}
+%
+% \begin{karte}{...}
+%	 ...
+% \end{karte}
+%
+% \end{document}
+
+\begin{document}
+\newcommand{\chapteramount}{3}
+
+
+\foreach\c in {2,...,\chapteramount} {
+	\input{chapter\c.tex}
+}
+\end{document}
