@@ -1,0 +1,70 @@
+\section*{Maße und Prämaße}
+
+\begin{karte}{Maß und Prämaß}
+	Sei \( \mathcal{A} \) eine \( \sigma \)-Algebra in \(X\). 
+	Dann ist ein Maß \(\mu\) eine Abbildung \( \abb{\mu}{\mathcal{A}}{[0,\infty]} \) (M0) 
+	mit den Eigenschaften 
+	\begin{enumerate}
+		\item \(\mu(\emptyset) = 0\). 
+		\item \(\sigma\)-Additivität: Für jede paarweise disjunkte Folge \( (A_n)_n \subset \mathcal{A} \) gilt 
+		\[ \mu\left( \bigcup_{n\in\N} A_n \right) = \sum_{n\in\N} \mu(A_n). \tag{M2} \]
+	\end{enumerate}
+	Ist \( \mathcal{A} \) keine \(\sigma\)-Algebra, aber es gelten (M0), (M1) und (M2), so ist \(\mu\) 
+	ein Prämaß.
+\end{karte}
+
+\begin{karte}{Maßraum}
+	\(X\) ist eine Menge und \(\mathcal{A}\) eine \(\sigma\)-Algebra in \(X\). 
+	Das Tupel \( (X,\mathcal{A}) \) heißt \textit{Messraum} und wenn \(\mu\) ein 
+	Maß auf \(X\) (implizit auf \(\mathcal{A}\)), dann heißt \( (X, \mathcal{A}) \) 
+	oder \( (X, \mathcal{A}, \mu) \) \textit{Maßraum}.\\
+	Endlicher Maßraum = Wahrscheinlichkeits-Raum, wobei \(\mu \) endlich, wenn \( \mu(X) < \infty \). 
+	Ein endliches Maß ist ein Wahrscheinlichkeits-Maß, falls \(\mu(X) = 1\).
+\end{karte}
+
+\begin{karte}{Eigenschaften von Maßen}
+	Sei \( (X, \mathcal{A}, \mu) \) ein Maßraum und \(A,B \in \mathcal{A}\). Dann gilt
+	\begin{enumerate}
+		\item \(A\cap B = \emptyset \Rightarrow \mu(A\cap B) = \mu(A) + \mu(B)\).
+		\item \(A \subset B \Rightarrow \mu(A) \leq \mu(B)\).
+		\item \(A \subset B\) und \( \mu(A) < \infty \Rightarrow \mu(B \setminus A) = \mu(B) - \mu(A) \).
+		\item \( \mu(A \cup B) + \mu(A\cap B) = \mu(A) + \mu(B) \).
+		\item \( \mu(A \cup B) \leq \mu(A) + \mu(B) \).
+	\end{enumerate}
+\end{karte}
+
+\begin{karte}{Maß Stetigkeit}
+	Sei \( (X, \mathcal{A}) \) ein Messraum. Dann ist \( \abb{\mu}{\mathcal{A}}{[0,\infty]} \) ein Maß genau dann, wenn gilt 
+	\begin{enumerate}
+		\item \(\mu(\emptyset) = 0\)
+		\item \( \mu(A\cup B) = \mu(A) + \mu(B) \;\forall A,B\in \mathcal{A}, A\cap B = \emptyset \)
+		\item \begin{itemize}
+			\item Stetigkeit von unten Für jede wachsende Folge \( (A_n)_n \subset \mathcal{A} \) mit \(A = \limes{n} A_n\) gilt \(\mu(A) = \limes{n} \mu(A_n) = \sup\limits_{n\in\N} \mu(A_n) \).
+			\item Stetigkeit von oben: Für jede fallende Folge \( (A_n)_n \subset \mathcal{A} \) mit \(A = \limes{n} A_n\) gilt \(\mu(A) = \limes{n} \mu(A_n) = \inf\limits_{n\in\N} \mu(A_n) \).
+			\item Stetigkeit in \(\emptyset\): Für jede fallende Folge \( (A_n)_n \subset \mathcal{A} \) mit \( A = \limes{n} A_n = \emptyset \) gilt \( \mu(A) = 0 \).
+		\end{itemize}
+	\end{enumerate}
+	Wobei in 3. jeder Punkt äquivalent ist.
+\end{karte}
+
+\begin{karte}{Verschiedene Maße}
+	Triviales Maß: \( \abb{\mu}{\mathcal{A}}{[0,\infty]}, A \mapsto 0 \).
+	
+	Diracmaß: Sei \( x_0 \in X \). Dann ist diese 
+	Abbildung ein endliches Maß auf \(\mathcal{A}\):
+	\[ \abb{\delta_{x_0}}{\mathcal{A}}{[0,\infty]}, 
+	A \mapsto \begin{cases}
+		1 &x_0 \in A \\
+		0 & x_0 \notin A
+	\end{cases}. \]
+
+	
+	Zählmaß: \( \abb{\mu}{\mathcal{A}}{[0,\infty]}, A \mapsto \abs{A} \).
+\end{karte}
+
+\begin{karte}{Maß von disjunkten Folgen}
+	Sei \(\mu\) ein Maß auf der \(\sigma\)-Algebra \(\mathcal{A}\) und \( (A_n)_n \subset \mathcal{A} \) 
+	und es gelte \( \exists k\in \N: A_m \cap A_n = \emptyset \forall m,n: \abs{m-n}\geq k \). Dann gilt 
+	\[ \sum_{n=1}^{\infty} \mu(A_n) \leq k \cdot \mu \left( \bigcup_{n=1}^\infty A_n \right). \]
+	Der Fall \(k = 1\) ist äquivalent zur \(\sigma\)-Additivität von \(\mu\).
+\end{karte}
