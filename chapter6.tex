@@ -1,0 +1,21 @@
+\section*{Maßerweiterung von Carathéodory}
+
+\begin{karte}{Äußeres Maß}
+	Sei \(A \subset X\) und \( \mathcal{H} \subset \mathcal{P}(X) \) ein Halbring.
+	Weiter sei für ein beliebiges \(A \subset X\) 
+	\[ J(A) := \set{ (A_n)_n \subset \mathcal{H} \;|\; A \subset \bigcup_{n=1}^\infty A_n }. \]
+	Falls keine Überdeckung existiert, ist \(J(A) = \emptyset\).\\
+	Ein äußeres Maß \( \mu_* \) zu \(\mu\) ist 
+	\[ \mu_*(A) = \inf \set{ \sum_{n=1}^\infty \mu(A_n) \;|\; (A_n)_n\in J(A) }, \]
+	falls es mindestens eine solche Überdeckung gibt.
+	Andernfalls ist \( \mu_*(A) := \infty \).
+\end{karte}
+
+\begin{karte}{Äußeres Maß nach Carathéodory}
+	Ein äußeres Maß ist eine Abbildung \( \abb{\eta}{\mathcal{P}(X)}{[0,\infty]} \), für welche gilt:
+	\begin{enumerate}
+		\item \(\eta(\emptyset) = 0\)
+		\item \( \forall A \subset B \subset X: \eta(A) \leq \eta(B) \) (Monotonie)
+		\item \( \forall (A_n)_n, A_n \subset X: \eta(\bigcup_{n=1}^\infty A_n) \leq \sum_{n=1}^\infty \eta(A_n) \) (\(\sigma\)-Subadditivität)
+	\end{enumerate}
+\end{karte}

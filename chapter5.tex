@@ -3,8 +3,8 @@
 \begin{karte}{Ring}
 	Sei \(X\) eine Menge. Ein System \(\mathcal{R} \subset \mathcal{P}(X) \) heißt \textit{Ring}, falls 
 	\begin{enumerate}
-		\item \( \emptyset \in \mathcal{R} \)
-		\item \( A,B \in \mathcal{R} \Rightarrow A\setminus B \in \mathcal{R} \)
+		\item \( \emptyset \in \mathcal{R} \).
+		\item \( A,B \in \mathcal{R} \Rightarrow A\setminus B \in \mathcal{R} \).
 		\item \( A,B \in \mathcal{R} \Rightarrow A \cup B \in \mathcal{R} \).
 	\end{enumerate}
 	Fordert man zusätzlich noch \(X \in \mathcal{R}\), dann ist \(\mathcal{R}\) eine Algebra.
@@ -67,11 +67,25 @@
 \begin{karte}{Erzeugung eines Ringes durch Halbring}
 	Der von einem Halbring \( \mathcal{H} \) erzeugte Ring \( \mathcal{R}(\mathcal{H}) \) ist gegeben durch 
 	\[ \mathcal{R} = \mathcal{R}(\mathcal{H}) := \set{ \bigcup_{j=1}^n \;|\; n\in\N, A_1, \ldots, A_n \in \mathcal{H} \text{ disjunkt} }. \]
-	Ist \( \abb{\mu}{\mathcal{H}}{[0,\infty]} \) gegeben, setze 
-	\[ \nu(A) := \nu\left(\bigcup_{j=1}^n A_j \right) = \sum_{j=1}^n \nu(A_j) = \sum_{j=1}^n \mu(A_j) \]
-	für \( A\in \mathcal{R}(\mathcal{H}) \). 
 \end{karte}
 
 \begin{karte}{Nullmenge}
 	Für \(\mu\) ist \( M\in \mathcal{A} \) eine Nullmenge, falls \( \mu(M) = 0 \).
+\end{karte}
+
+\begin{karte}{Erster Fortsetzungssatz}
+	Sei \( \abb{\mu}{\mathcal{H}}{[0,\infty]} \) ein Inhalt auf einem Halbring \(\mathcal{H}\) 
+	und \( \mathcal{R} \) der von \(\mathcal{H}\) erzeugte Ring.\\
+	\(\Rightarrow \exists !\) Fortsetzung \( \abb{\nu}{\mathcal{R}}{[0,\infty]} \) von \(\mu\) 
+	zu einem Inhalt auf \(\mathcal{R}\) und zwar ist 
+	\[ \nu(A) = \sum_{j=1}^n \mu(A_j), \]
+	falls \(A \in \mathcal{R}\) die endliche Vereinigung der disjunkten Mengen \(A_1,\ldots,A_n\in\mathcal{H}\) ist.\\
+	Ferner gilt: \(\nu\) ist ein Prämaß auf \(\mathcal{R}\) 
+	\(\Leftrightarrow\) \(\mu\) ist ein Prämaß auf \(\mathcal{H}\).
+\end{karte}
+
+\begin{karte}{Lebesguesches Prämaß}
+	Das lebesguesche Prämaß \( \abb{\lambda^d}{J^d}{[0,\infty)} \) auf \(J^d\) 
+	mit \(I = \prod_{j=1}^d [a_j,b_j) \in J^d \) ist definiert durch 
+	\[ \lambda^d(\emptyset) := 0, \quad \lambda^d(I) := \prod_{j=1}^d (b_j - a_j). \] 
 \end{karte}
