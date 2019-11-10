@@ -19,3 +19,74 @@
 		\item \( \forall (A_n)_n, A_n \subset X: \eta(\bigcup_{n=1}^\infty A_n) \leq \sum_{n=1}^\infty \eta(A_n) \) (\(\sigma\)-Subadditivität)
 	\end{enumerate}
 \end{karte}
+
+\begin{karte}{\(\eta\)-messbar}
+	Sei \( \abb{\eta}{\mathcal{P}(X)}{[0,\infty]} \) ein äußeres Maß. Dann heißt 
+	\( A\subset X \) \(\eta\)-messbar, falls für alle \( Q \subset X \) gilt 
+	\[ \eta(Q) \geq \eta(Q\cap A) + \eta(Q \cap A^C) \]
+\end{karte}
+
+\begin{karte}{Eigenschaften \(\eta\)-messbar}
+	Sei \( \abb{\eta}{\mathcal{P}(X)}{[0,\infty]} \) ein äußeres Maß, \(A\subset X\). Dann gilt 
+	\begin{enumerate}
+		\item Ist \( \eta(A) = 0 \) oder \( \eta(A^C) = 0 \), dann ist \(A\) \(\eta\)-messbar.
+		\item \( A \) ist \(\eta\)-messbar \( \Leftrightarrow \forall Q\subset X \) mit 
+		\( \eta(Q) \geq \eta(Q\cap A) + \eta(Q \cap A^C) \).
+		\item \( A \) ist \(\eta\)-messbar \( \Leftrightarrow \forall Q\subset X: 
+		\eta(Q) = \eta(Q\cap A) + \eta(Q\cap A^C) \) zerlegt in zwei disjunkte Teilmengen.
+	\end{enumerate}
+\end{karte}
+
+\begin{karte}{Satz von Carathéodory}
+	Ist \( \abb{\eta}{\mathcal{P}(X)}{[0,\infty]} \) ein äußeres Maß, so ist 
+	\[ \mathcal{A}_\eta := \set{ A\subset X \;|\; \text{A ist \(\eta\)-messbar} } \]
+	eine \(\sigma\)-Algebra und \(\eta\) ein Maß.
+\end{karte}
+
+\begin{karte}{Fortsetzungssatz}
+	Sei \( \abb{\mu}{\mathcal{H}}{[0,\infty]} \) ein Inhalt auf einem 
+	Halbring \( \mathcal{H} \subset \mathcal{P}(X) \) und für \( A \subset X \) 
+	gilt 
+	\[ \eta(A) := \inf \set{ \sum_{n=1}^\infty \mu(A_n) \;|\; A_n \in \mathcal{H}, A \subset \bigcup_{n=1}^\infty A_n }, 
+	\qquad \inf(\emptyset) := \infty, \]
+	so gilt 
+	\begin{enumerate}
+		\item \( \abb{\eta}{\mathcal{P}(X)}{[0,\infty]} \) ist ein äußeres Maß 
+		und alle Mengen aus \( \mathcal{H} \) sind \(\eta\)-messbar.
+		\item Ist \(\mu\) ein Prämaß, so gilt \( \eta|_{\mathcal{H}} = \mu \) 
+		und somit ist \( \eta|_{\mathcal{A}_n} \) eine Fortsetzung von \(\mu\) 
+		zu einem Maß auf der \( \sigma \)-Algebra \( \mathcal{A}_n \), die 
+		\( \mathcal{H} \) und somit auch \( \sigma(\mathcal{H}) \) enthält.
+		\item Ist \(\mu\) kein Prämaß, so gibt es \( A\in \mathcal{H} \) 
+		mit \( \eta(A) \leq \mu(A)\).
+	\end{enumerate}
+\end{karte}
+
+
+\begin{karte}{Verteilungsfunktion}
+	Sei \( \abb{F}{\R}{\R} \) rechtsseitig stetig und monoton wachsend, dann 
+	heißt \(F\) \textit{Verteilungsfunktion}, falls \( \limesx{x}{-\infty}F(x) = 0 \) 
+	und \( \limesx{x}{\infty}F(x) = 1 \).
+\end{karte}
+
+\begin{karte}{Lebesgue-Stieltjes-Maß}
+	Für eine Verteilungsfunktion \(F\) heißt \( \mu_F((a,b]) = F(b) - F(a) \) Lebesgue-Stieltjes-Maß. 
+	Falls \(\mu\) endlich und \(\mu(X) = 1\), dann ist
+	\( F_\mu(x) := \mu((-\infty,x]) \) eine Verteilungsfunktion.
+\end{karte}
+
+\begin{karte}{Eigenschaften Verteilungsfunktion (TODO)}
+	Es gilt 
+	\begin{enumerate}
+		\item \( \abb{F}{\R}{\R} \) ist monoton wachsend und beschränkt 
+		\( \Rightarrow \abb{\mu_f}{\mathcal{G}}{\R} \) mit 
+		\( \mu_F((a,b]) = F(b) - F(a) \) für \(a\leq b\) ist ein Inhalt.
+		\item Für \( \abb{F,G}{\R}{\R} \) gilt \( \mu_F = \mu_G \Leftrightarrow F - G\) ist konstant.
+	\end{enumerate}
+\end{karte}
+
+\begin{karte}{Eigenschaften Stieltjes'scher Inhalt}
+	Sei \( \abb{F}{\R}{\R} \) monoton wachsend, \( \abb{\mu_F}{\mathcal{G}}{\R} \) der Stieltjes'sche Inhalt. Dann gilt 
+	\[ \mu_f \text{ ist ein Prämaß} \Leftrightarrow F \text{ ist rechtsseitig stetig.} \]
+\end{karte}
+
