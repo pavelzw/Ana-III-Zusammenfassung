@@ -1,0 +1,32 @@
+\section*{Translationsinvarianz Lebesgue-Borel-Maß}
+
+\begin{karte}{Prinzip der guten Mengen}
+	Sei \( \mathcal{A} \) eine \(\sigma\)-Algebra über \(X\). Sei \( \mathcal{G} \subset \mathcal{P}(X) \) 
+	die Menge der \gqq{guten Mengen}. Gilt nun 
+	\begin{enumerate}
+		\item \( \mathcal{G} \) enthält einen Erzeuger von \(\mathcal{A}\),
+		\item \( \mathcal{G} \) ist eine \(\sigma\)-Algebra,
+	\end{enumerate}
+	so folgt für einen Erzeuger \( \mathcal{E} \) von \( \mathcal{A} \) 
+	\[ \mathcal{A} = \sigma(\mathcal{E}) \subset \sigma(\mathcal{G}) = \mathcal{G}. \]
+\end{karte}
+\begin{karte}{Translation von Mengen}
+	\( \forall A\in \mathcal{B}^d = \sigma(\mathcal{O}): \forall x\in \R^d \) ist 
+	\( T_x(A) = x + A = \set{ x + a \;|\; a\in A } \in \mathcal{B}^d \).\\
+	Für jede Bewegung \( T\in \mathrm{Bew}(\R^d) \) und jedes \(A \in \mathcal{B}^d \) ist \( T^{-1}(A) \in \mathcal{B} \).
+\end{karte}
+\begin{karte}{Translationsinvariant}
+	Das Lebesgue-Maß \( \abb{\lambda^d}{\mathcal{B}^d}{[0,\infty]} \) ist 
+	translationsinvariant, d. h. \( \lambda^d(x+A) = \lambda^d(A) \forall x\in \R^d, A\in \mathcal{B}^d \).
+\end{karte}
+\begin{karte}{Translationsinvariante Maße auf \(\mathcal{B}^d\)}
+	Für jedes Maß \( \mu \) auf \(\mathcal{B}^d\), welches translationsinvariant ist, also 
+	\( \mu(A) = \mu(x + A) \) und für das \( \alpha := \mu(\omega) < \infty \) gilt, ist gegeben durch 
+	\[ \mu= \alpha \cdot \lambda^d. \]
+\end{karte}
+\begin{karte}{Lebesgue-Borel-Maß Eigenschaften}
+	Das Lebesgue-Borel-Maß \(\lambda^d \) ist das einzige translationsinvariante Maß auf \( \mathcal{B}^d \) 
+	mit \( \lambda^d(\omega) = 1 \).\\
+	Das Lebesgue-Borel-Maß \( \lambda^d \) ist bewegungsinvariant, d. h. 
+	\[ \lambda^d(T^{-1}(A)) = \lambda^d(A). \]
+\end{karte}
