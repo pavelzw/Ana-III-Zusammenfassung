@@ -1,0 +1,41 @@
+\section*{Messbare Abbildungen}
+
+\begin{karte}{\( \mathcal{A} \)-\(\mathcal{A}'\)-messbar}
+	Seien \( (X, \mathcal{A}), (X', \mathcal{A}') \) Messräume, 
+	\( \abb{T}{X}{X'} \) eine Funktion. \(T\) heißt \( \mathcal{A} \)-\(\mathcal{A}'\)-messbar, 
+	falls \( T^{-1}(A') \in \mathcal{A} \; A'\in \mathcal{A}' \Leftrightarrow T^{-1}(\mathcal{A}') \subset \mathcal{A} \).
+	Schreiben auch \( \abb{T}{(X, \mathcal{A})}{(X', \mathcal{A}')} \), \(T\) ist messbar.
+\end{karte}
+
+\begin{karte}{Gute Mengen als Messbarkeitskriterium}
+	Seien \( (X, \mathcal{A}), (X', \mathcal{A}') \) Messräume und 
+	\( \mathcal{E}' \) ein Erzeuger von \( \mathcal{A}' \). Dann ist 
+	\( \abb{T}{X}{X'} \) \( \mathcal{A} \)-\( \mathcal{A}' \)-messbar
+	\( \Leftrightarrow T^{-1}(E') \in \mathcal{A} \;\forall E' \in \mathcal{E} \).
+\end{karte}
+
+\begin{karte}{Komposition von Abbildungen messbar}
+	Sei \( \abb{T_1}{(X_1, \mathcal{A}_1)}{(X_2, \mathcal{A}_2)} \) \(\mathcal{A}_1\)-
+	\(\mathcal{A}_2\)-messbar und \( \abb{T_2}{\mathcal{A}_2}{\mathcal{A}_3} \) 
+	\( \mathcal{A}_2 \)-\(\mathcal{A}_3\)-messbar. \\
+	\( \Rightarrow \abb{T_2 \circ T_1}{(X_1, \mathcal{A}_1)}{(X_3, \mathcal{A}_3)} \) ist 
+	\( \mathcal{A}_1 \)-\(\mathcal{A}_3\)-messbar.
+\end{karte}
+
+\begin{karte}{\( \sigma \)-Algebra zu Abbildungen}
+	Seien Familien \( (X_j, \mathcal{A}_j)_{j \in J}, (T_j)_{j\in J} \) mit 
+	\( \abb{ T_j }{X}{X_j} \) gegeben. \(  \sigma( \bigcup_{j\in J} T_j^{-1}(\mathcal{A}_j) )\) 
+	ist die kleinste \( \sigma \)-Algebra auf \(X\), für die alle 
+	\( \abb{T_j}{X}{X_j} \) messbar sind. 
+	Ist \( J \) endlich \( J := \set{1,\ldots,n} \) und schreiben \( \sigma(T_1,\ldots, T_n) \). \\
+	Sei \( \abb{S}{X_0}{X} \) eine Abbildung eines Messraums \( (X_0, \mathcal{A}_0) \). \\
+	\(S\) ist \(\mathcal{A}_0\)-\( \sigma(T_j \;|\;j\in J) \) messbar 
+	\( \Leftrightarrow \abb{T_j \circ S}{X_0}{X_j} \) ist \(\mathcal{A}_0\)-\(\mathcal{A}_j\)-messbar.
+\end{karte}
+
+\begin{karte}{Maß von messbaren Abbildungen}
+	Sei \( \abb{T}{(X, \mathcal{A})}{(X', \mathcal{A}')} \) und \(\mu\) ein Maß auf 
+	\(\mathcal{A}\) 
+	\( \mu'(A') := \mu(T^{-1}(A')) \;A' \in \mathcal{A}' \) ist Maß auf \( \mathcal{A}' \).\\
+	\( \mu' = T(\mu) = \mu \circ T^{-1} \) heißt Bildmaß von \( \mu \) unter \(T\).
+\end{karte}
