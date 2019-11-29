@@ -2,5 +2,55 @@
 
 \begin{karte}{Messbarkeitskriterium}
 	Eine numerische Funktion \(  \abb{f}{(X, \mathcal{A})}{(\R, \mathcal{B}(\R))}\) auf \(X\) ist 
-	\( \mathcal{A} \)-messbar \( \Leftrightarrow \set{x \in X \;|\; f(x) \geq \alpha} \in \mathcal{A} \;\forall \alpha \in \R \).
+	\( \mathcal{A} \)-messbar \\
+	\( \Leftrightarrow \set{x \in X \;|\; f(x) \geq \alpha} \in \mathcal{A} \;\forall \alpha \in \R \). \\
+	\( \Leftrightarrow \set{x \in X \;|\; f(x) > \alpha} \in \mathcal{A} \;\forall \alpha \in \R \). \\
+	\( \Leftrightarrow \set{x \in X \;|\; f(x) \leq \alpha} \in \mathcal{A} \;\forall \alpha \in \R \). \\
+	\( \Leftrightarrow \set{x \in X \;|\; f(x) < \alpha} \in \mathcal{A} \;\forall \alpha \in \R \). \\
+	Für je zwei \( \mathcal{A} \)-messbare Funktionen 
+	\( \abb{f, g}{X}{\bar{\R}} \) sind 
+	\( \set{f < g}, \set{f \leq g}, \set{ f \neq g }, \set{f = g} \in \mathcal{A} \).
+\end{karte}
+
+\begin{karte}{Komposition von messbaren Abbildungen}
+	Mit \( \abb{f,g}{X}{\bar{\R}} \) messbar sind auch 
+	\( f\pm g \) und \( f \cdot g \) (falls überall definiert) messbar.
+\end{karte}
+
+\begin{karte}{Folge messbarer Funktionen}
+	Ist \( (f_n)_n \) eine Folge \( \mathcal{A} \)-messbarer 
+	numerischer Funktionen auf \(X\).
+	\[ \sup_{n\in\N} f_n, \inf_{n\in\N} f_n, \limsup_{n\in\N} f_n, \liminf_{n\in\N} f_n 
+	\text{ sind } \mathcal{A}\text{-messbar}. \]
+\end{karte}
+
+\begin{karte}{Maximum messbarer Funktionen}
+	\( \abb{f_1, \ldots, f_n}{X}{\bar{\R}} \) 
+	seien endlich viele \( \mathcal{A} \)-messbare 
+	numerische Funktionen,
+	So ist die obere (untere) Einhüllende 
+	\[ \max_{1\leq i \leq n} f_i 
+	= f_1 \vee \ldots \vee f_n, \qquad 
+	\min_{1 \leq i \leq n} f_i 
+	= f_1 \wedge \ldots \wedge f_n \]
+	\( \mathcal{A} \)-messbar.
+\end{karte}
+
+\begin{karte}{Limes von messbaren Funktionen}
+	Ist \( (f_n)_n \) eine Folge \( \mathcal{A} \)-messbarer numerischer Funktionen und 
+	existiert eine Grenzfunktion 
+	\( \limes{n} f_n \).\\
+	\( \Rightarrow \limes{n} f_n \) ist \(\mathcal{A}\)-messbar.
+\end{karte}
+
+\begin{karte}{Messbarkeit von \(f^+, f^-, \abs{f}\)}
+	Eine numerische Funktion \( \abb{f}{X}{\bar{\R}} \) 
+	ist genau dann \( \mathcal{A} \)-messbar, wenn
+	\( f_+ \) und \( f^- \) \( \mathcal{A} \)-messbar sind. 
+	Außerdem gilt: \( f \) ist \(\mathcal{A}\)-messbar \( \Rightarrow \abs{f} \) ist \( \mathcal{A} \)-messbar.\\
+	Es gilt 
+	\[ f^+(x) := \begin{cases}
+		f(x), & f(x) \geq 0 \\
+		0, & f(x) < 0
+	\end{cases}, \qquad f^- := (-f)^+. \]
 \end{karte}
