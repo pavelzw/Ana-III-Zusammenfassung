@@ -1,0 +1,69 @@
+\section*{Das Integral pos. messb. num. Fkt.}
+
+\begin{karte}{Integral vom Supremum von Funktionenfolgen}
+	Sei \( (u_n)_n \subset E^+ \) eine wachsende Funktionenfolge 
+	(\(u_n \leq u_{n+1}\)) und \(u \in E^+\).\\
+	\( u \leq \sup_{n\in\N} u_n \Rightarrow \int u \dx{\mu} 
+	\leq \sup_{n\in\N} \int u_n \dx{\mu} \).\\
+	Sind \( (u_n)_n, (v_n)_n \) wachsende Folgen in \(E^+\). Dann gilt 
+	\[ \sup_{n\in\N} u_n = \sup_{n\in\N} v_n \Rightarrow 
+	\sup_{n\in\N} \int u_n \dx{\mu} = \sup_{n\in\N} \int v_n \dx{\mu}. \]
+\end{karte}
+
+\begin{karte}{\( \mathcal{M}^+ \)}
+	\( \mathcal{M}^+ := \mathcal{M}^+(X, \mathcal{A}) 
+	= \set{f \;|\; f \geq 0, \text{ es gibt eine wachsende Folge } (u_n)_n \subset E^+ 
+	\text{ mit } f = \sup_{n\in\N} u_n. } \). Also alle numerischen Funktionen, für die es eine wachsende Folge im Supremum gibt.
+	Es gilt für \( \sup_{n\in\N} u_n = f\in \mathcal{M}^+: \int f \dx{\mu} = \sup_{n\in\N} \int u_n \dx{\mu} \).\\
+	Alle messbaren numerischen Funktionen \( f \geq 0 \) auf \(X\) sind in \( \mathcal{M}^+ \).
+\end{karte}
+
+\begin{karte}{Eigenschaften von \( \mathcal{M}^+ \)}
+	Es gilt \( f,g \in \mathcal{M}^+ \Rightarrow \)
+	\begin{itemize}
+		\item \( \alpha f \in \mathcal{M}^+ \;\forall \alpha \in\R \).
+		\item \( f + g \in \mathcal{M}^+ \).
+		\item \( f \cdot g \in \mathcal{M}^+ \).
+		\item \( f \vee g \in \mathcal{M}^+ \).
+		\item \( f \wedge g \in \mathcal{M}^+ \).
+		\item \( \int \alpha f \dx{\mu} 
+		= \alpha \int f \dx{\mu} \).
+		\item \( \int f+g \dx{\mu} 
+		= \int f \dx{\mu} + \int g \dx{\mu} \).
+		\item \( f \leq g \Rightarrow 
+		\int f \dx{\mu} \leq \int g\dx{\mu} \).
+	\end{itemize}
+\end{karte}
+
+\begin{karte}{Satz von der monotonen Konvergenz (Beppo Levi)}
+	Sei \( (f_n)_n \subset \mathcal{M}^+ \) eine wachsende Folge
+	\( \Rightarrow \sup_{n\in\N} f_n \in \mathcal{M} \) und 
+	\( \int \sup_{n\in\N} f_n \dx{\mu} 
+	= \sup_{n\in\N} \int f_n \dx{\mu} \).\\
+	Alternative Formulierung: 
+	\( \int \limes{n} f_n \dx{\mu} 
+	= \limes{n} \int f_n \dx{\mu} \).
+\end{karte}
+
+\begin{karte}{Integral von Funktionsreihen}
+	\( \forall \) Folgen \( (f_n)_n \subset \mathcal{M}^+ \) gilt: 
+	\[ \sum_{n=1}^{\infty} f_n \in \mathcal{M}^+ \text{ und } \int \sum_{n\in\N} f_n \dx{\mu} 
+	= \sum_{n\in\N} \int f_n \dx{\mu}. \]
+\end{karte}
+
+\begin{karte}{Lemma von Fatou}
+	Sei \( (f_n)_n \subset \mathcal{M}^+ \). Dann gilt 
+	\[ \limesinf{n} f_n \in \mathcal{M} 
+	\text{ und } \int \limesinf{n} f_n \dx{\mu} \leq \limesinf{n} \int f_n \dx{\mu}. \]
+\end{karte}
+
+\begin{karte}{\(\limesinf{n}\) und \( \limessup{n} \) von Mengenfolgen}
+	\( \forall (A_n)_n \subset \mathcal{A} \) gilt 
+	\[ \mu(\limesinf{n} A_n) \leq \limesinf{n} \mu(A_n). \]
+	Für \( \mu \) endlich gilt: 
+	\[ \mu(\limessup{n} A_n) \geq \limessup{n} \mu(A_n). \]
+\end{karte}
+
+\begin{karte}{}
+	Inhalt...
+\end{karte}

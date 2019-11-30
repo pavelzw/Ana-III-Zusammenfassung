@@ -1,5 +1,42 @@
 \section*{Elementarfunkt. und ihr Integral}
 
-\begin{karte}{}
-	Inhalt...
+\begin{karte}{\( \mathcal{A} \)-Elementarfunktion}
+	Sei \( \mathcal{A} \) eine \(\sigma\)-Algebra in \(X\). 
+	Eine Funktion \( \abb{f}{X}{\R} \) heißt \(\mathcal{A}\)-Elementarfunktion, 
+	wenn sie nur endlich viele Werte annimmt und \(\mathcal{A}\)-messbar ist.\\
+	Wir schreiben \( E = E(X, \mathcal{A}) \) als die Menge aller Elementarfunktionen, 
+	\( E^+ = \set{ f\in E \;|\; f \geq 0 } \) die Menge aller positiven Elementarfunktionen.
+\end{karte}
+
+\begin{karte}{Normaldarstellung}
+	Jedes \( u \in E \) hat Darstellung \( u = \sum_{j=1}^n a?j \mathds{1}_{A_j} \) 
+	mit \( A_1,\ldots, A_n \) paarweise disjunkt und \( X = \bigcup_{j=1}^n A_j \), also \( A_j \) Zerlegung von \(X\).
+	Wir nennen eine solche Darstellung von \(u\) \textit{Normaldarstellung}.
+\end{karte}
+
+\begin{karte}{Maß von Normaldarstellungen}
+	Sei \( (X, \mathcal{A}, \mu) \) ein Maßraum. Für je zwei Normaldarstellungen 
+	\( u = \sum_{j=1}^n \alpha_j \mathds{1}_{A_j} = \sum_{l=1}^m \beta_l \mathds{1}_{B_l} \) einer 
+	positiven Elementarfunktion \( u \in E^+ \) gilt: 
+	\[ \sum_{j=1}^n \alpha_j \mu(A_j) 
+	= \sum_{l=1}^m \beta_l \mu(B_l). \]
+\end{karte}
+
+\begin{karte}{\( \mu \)-Integral}
+	Sei \( u \in E^+ \). Dann heißt die von der speziellen Normaldarstellung 
+	\( u = \sum_{j=1}^n \alpha_j \mathds{1}_{A_j} \) unabhängige 
+	Zahl 
+	\[ \int u \dx{\mu} 
+	:= \sum_{j=1}^n \alpha_j \mu(A_j) \]
+	das \( \mu \)-Integral von \(u\) über \(X\).\\
+	\( u \mapsto \int u \dx{\mu} \) definiert eine Abbildung von 
+	\(E^+\) nach \( \bar{\R}_+ \) oder sogar nach \( \R_+ \), wenn \(\mu\) 
+	endlich ist.\\
+	Wichtige Eigenschaften:
+	\begin{enumerate}
+		\item \( \int \mathds{1}_A \dx{\mu} = \mu(A) \).
+		\item \( \int \alpha u \dx{\mu} = \alpha \int u \dx{\mu} \) für \( \alpha \geq 0, u \in E^+ \).
+		\item \( \int u + v \dx{\mu} = \int u \dx{\mu} + \int v \dx{\mu} \) für \( u,v \in E^+ \).
+		\item \( \int u \dx{\mu} \leq \int v \dx{\mu} \) für \( u \leq v \in E^+ \).
+	\end{enumerate}
 \end{karte}
