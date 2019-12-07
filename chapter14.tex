@@ -1,0 +1,134 @@
+\section*{Integrierbare Funktionen}
+
+\begin{karte}{\( \mu \)-integrierbar}
+	Sei \( (X, \mathcal{A}, \mu) \) ein Maßraum. Eine numerische Funktion 
+	\( \abb{f}{X}{\bar{R}} \) heißt \(\mu\)-integrierbar, falls sie 
+	\( \mathcal{A} \)-messbar ist und die Integrale \( \int f^- \dmu, \int f^+ \dmu \) 
+	reelle Zahlen sind. Dann heißt 
+	\[ \int f \dmu := \int f^- \dmu + \int f^+ \dmu \]
+	das \( \mu \)-Integral von \( f \) auf \(X\).\\
+	Die rechte Seite ist wohldefiniert, falls mind. einer der Terme \( \int f^+ \dmu \) oder 
+	\( \int f^- \dmu \) endlich sind. Man sagt dann, \(f\) ist quasi integrierbar oder 
+	das Integral von \(f\) existiert.
+	Wir schreiben auch 
+	\( \int f(x) \dmu(x) \) oder \( \int f(x) \mu(\dx{x}) \). \\
+	Ist \( f \geq 0 \Rightarrow f^{-1} \equiv 0 \Rightarrow \int f \dmu\) ist konstand mit dem Integral von 
+	\( f\in \mathcal{M}^+ \).
+\end{karte}
+
+\begin{karte}{Bedingungen für Integrierbarkeit}
+	Notwendig und hinreichend für die Integrierbarkeit einer messbaren, numerischen Funktion 
+	\( \abb{f}{X}{\bar{\R}} \) ist jede der folgenden Bedingungen 
+	\begin{itemize}
+		\item \( f^+ \) und \(f^-\) sind integrierbar.
+		\item \(\exists\) integrierbare Funktionen \(u, v \geq 0\) mit \(f = u - v\).\\
+		Es gilt dann \( \int f \dmu = \int u \dmu - \int v \dmu \).
+		\item \( \exists \) integrierbare Funktion \( g\geq 0 \) mit \( \abs{f} \leq g \).
+		\item \( \abs{f} \) ist integrierbar.
+	\end{itemize}
+\end{karte}
+
+\begin{karte}{Linearität des Integrals}
+	Seien \( \abb{f,g}{X}{\bar{\R}} \) integrierbare, numerische 
+	Funktionen. \( \Rightarrow \alpha f, \alpha \in \R \) 
+	und \( f + g \) (sofern überall definiert) sind integrierbar 
+	und es gilt 
+	\[ \int \alpha f \dmu = \alpha \int f \dmu, \quad
+	\int f+g \dmu = \int f \dmu + \int g \dmu. \]
+	Ferner sind \(f \vee g\) und \( f \wedge g \) integrierbar.
+\end{karte}
+
+\begin{karte}{Monotonie des Integrals}
+	Seien \( \abb{f,g}{X}{\bar{\R}} \) integrierbare, 
+	numerische Funktionen und es gelte \( f \leq g \).
+	\[ \Rightarrow \int f \dmu \leq \int g \dmu, \quad 
+	\abs{\int f \dmu} \leq \int \abs{f}\dmu. \]
+\end{karte}
+
+\begin{karte}{Integral von unendlichen Funktionen}
+	Für jede \( \mu \)-integrierbare numerische Funktion \( f \) auf \(X\) ist 
+	\( \set{\abs{f} = +\infty} \) eine \(\mu\)-Nullmenge.
+\end{karte}
+
+\begin{karte}{Integrale über \( \C\)}
+	\( \abb{f}{X}{\C} \) heißt \( \mu \)-integrierbar über \( X \), wenn \( f \) messbar ist und 
+	\( \Re(f), \Im(f) \) integrierbar sind. \\
+	Wir setzen dann \( \int f \dmu := \int \Re(f) \dmu + i \cdot \int \Im(f) \dmu \).\\
+	Seien \( \abb{f,g}{X}{\C} \) integrierbar, \(\alpha \in \C\). Dann gilt 
+	\[ \int \alpha f \dmu = \alpha \int f\dmu, \quad 
+	\int f + g \dmu = \int f \dmu + \int g \dmu. \]
+	Ist \(\abb{f}{X}{\C}\) integrierbar, so gilt 
+	\[ \abs{ \int f \dmu } \leq \int \abs{f} \dmu. \]
+	Seien \( \abb{f,g}{X}{\C} \) quasi-integrierbar und \( f \leq g \). 
+	Dann gilt \( \int f \dmu \leq \int g \dmu \).
+\end{karte}
+
+\begin{karte}{Integrierbarkeitsbedingungen über \( \C\)}
+	Für jede Funktion \( \abb{f}{X}{\C} \) sind äquivalent 
+	\begin{itemize}
+		\item \(f\) ist integrierbar.
+		\item \( \Re f \) und \(\Im f\) sind integrierbar.
+		\item \( (\Re f)^\pm \) und \( (\Im f)^\pm \) sind integrierbar.
+		\item \( \exists \) reelle integrierbare Funktionen 
+		\(p,q,r,s \geq 0 \) mit \( f = p - q + i \cdot (r - s) \).
+		\item \( f \) ist messbar und \( \exists \) integrierbare Funktion \( g \geq 0: \abs{f}\leq g \).
+		\item \( f \) ist messbar und \( \abs{f} \) integrierbar.
+	\end{itemize}
+\end{karte}
+
+\begin{karte}{Konvexe Funktionen}
+	Eine Funktion \( \abb{f}{\R^d}{\R} \) heißt \textit{konvex}, 
+	falls für \( x,y\in \R^d \) und \( \theta \in [0,1] \) gilt, dass 
+	\[ f(\theta x + (1 - \theta)y) \leq \theta f(x) + (1 - \theta) f(y). \]
+	Äquivalent sind 
+	\begin{itemize}
+		\item \(f\) ist konvex.
+		\item \( f(t) \leq f(x) + \frac{f(y) - f(x)}{y - x} (t-x), \;x < t<y \).
+		\item \( \frac{f(t) - f(x)}{t - x} \leq \frac{f(y) - f(x)}{y - x} \).
+		\item \( \frac{f(t) - f(x)}{t - x} \leq \frac{f(y) - f(t)}{y - t}, \; x < t < y \).
+	\end{itemize}
+\end{karte}
+
+\begin{karte}{Jensensche Ungleichung}
+	Sei \( (X, \mathcal{A}, \mu) \) ein Maßraum mit 
+	\( \mu(X) = 1, I \subset \R \) ein Intervall und 
+	\( \abb{f}{X}{I} \) \(\mu\)-integrierbar sowie 
+	\( \abb{\phi}{I}{\R} \) konvex, dann gilt 
+	\[ m := \int f \dmu \in I, \phi \circ f \text{ ist integrierbar und } \]
+	\[ \phi\left(\int f\dmu \right) \leq \int \phi \circ f \dmu. \]
+\end{karte}
+
+\begin{karte}{Integral über \(A \in \mathcal{A}\)}
+	Sei \(\abb{f}{X}{\bar{\R}}\) integrierbar oder in \( \mathcal{M}^+ \), \(A \in \mathcal{A}\). \\
+	Wir setzen 
+	\[ \int_A f \dmu := \int \mathds{1}_A f \dmu \] 
+	und nennen dies das \( \mu \)-Integral über \(A\).\\
+	Insbesondere gilt \( \int_X f\dmu = \int f \dmu \).
+	\begin{itemize}
+		\item \( \int_{A\cup B} f\dmu + \int_{A\cap B} f\dmu = \int_A f \dmu + \int_B f \dmu \).
+		\item \( \int_{A\cup B} f\dmu = \int_A f \dmu + \int_B f \dmu \), falls \(A \cap B = \emptyset\).
+		\item \( f \leq g \) auf \(A \Rightarrow \int_A f \dmu \leq \int_A g \dmu\).
+	\end{itemize}
+\end{karte}
+
+\begin{karte}{\(\mathcal{L}^1(\mu)\)}
+	Wir setzen \( \mathcal{L}^1(\mu) := \) Menge aller reellwertigen \( \mu \)-integrierbaren Funktionen auf \(X\).\\
+	Wir setzen \( \mathcal{L}^1_\C(\mu) := \) Menge aller komplexwertigen \( \mu \)-integrierbaren Funktionen auf \(X\).\\
+	Es gilt \( \int f \dx{(\mu + \nu)} = \int f \dmu + \int f \dx{\nu} \).\\
+	\( \mathcal{L}^1(\mu) \) ist ein Vektorraum.\\
+	\(f \mapsto \int_A f \dmu\) ist eine monotone Linearform auf \( \mathcal{L}^1(\mu)  \) für \(A\in \mathcal{A}\).
+\end{karte}
+
+\begin{karte}{Restriktion einer Funktion}
+	Sei \(f \in \mathcal{L}^1(\mu)\). \(f'\) ist die Restriktion von \(f\) auf \(A\).\\
+	\( \Rightarrow f' \in \mathcal{L}^1(\mu_A)\) und \( \int f' \dx{\mu_A} = \int_A f \dmu \) für \( \mu_A := \mu_{A \cap \mathcal{A}} \).
+\end{karte}
+
+\begin{karte}{Erweiterung einer Funktion auf \(X\)}
+	Sei \( f \) eine auf einer Menge \(A \in \mathcal{A}\) definierte numerische Funktion. Dann gilt \\
+	\(f\) ist über \( A \) \(\mu\)-integrierbar \( \Leftrightarrow \) 
+	die durch \( f_A(x) := \begin{cases}
+	f(x) & x\in A\\ 0 & x \notin A
+	\end{cases} \) auf ganz \(X\) definierte Funktion ist \(\mu\)-integrierbar.\\
+	Es gilt \( \int_A f \dmu = \int f_A \dmu = \int \mathds{1}_A f \dmu \).
+\end{karte}
