@@ -1,0 +1,41 @@
+\section*{Majorisierte Konvergenz}
+
+\begin{karte}{Der Satz von der majorisierten Konvergenz}
+	Die Funktionen \( \abb{f, f_n}{X}{\bar{R}} \) 
+	seien messbar und \( \limes{n} f_n = f\ \mu \)-fast überall. 
+	Ferner gebe es eine \(\mu\)-integrierbare Funktion 
+	\( g \geq 0 \) auf \(X\) mit \( \abs{f_n} \leq g\ \mu \)-fast überall.
+	\( \Rightarrow f_n \) und \(f\) sind \( \mu \)-integrierbar und es gilt 
+	\[ \limes{n} \int f_n \dmu = \int f \dmu \text{ und } \limes{n} \int \abs{ f - f_n } \dmu = 0. \]
+	Man nennt \(g\) die \textit{integrierbare Majorante}.
+\end{karte}
+
+\begin{karte}{Stetigkeitslemma}
+	Sei \( E \) ein metrischer Raum, \( \abb{f}{E\times X}{\R} \) eine Funktion mit 
+	\begin{enumerate}
+		\item \( x\mapsto f(t,x) \) ist \(\mu\)-integrierbar \(\forall t\in E\).
+		\item \( t\mapsto f(t,x) \) ist stetig in \(t_0 \;\forall x\in X\).
+		\item \( \exists \ \mu \)-integrierbare Funktion 
+		\( \eta \geq 0 \) auf \( X \) mit \( \abs{f(t,x)} \leq \eta(x) \;\forall t\in E, x\in X \).
+	\end{enumerate}
+	\( \Rightarrow \) die auf \(E\) definierte Funktion 
+	\( \varphi(t) := \int f(t,x) \;\mu(\text{d}x) \) ist stetig in \( t_0 \).
+\end{karte}
+
+\begin{karte}{Differntiationslemma}
+	Sei \(I\) ein nicht ausgeartetes Intrervall in \(\R\) (d. h. weder leer noch ein Punkt), 
+	\( \abb{f}{I}{\R} \) eine Funktion mit 
+	\begin{enumerate}
+		\item \( x\mapsto f(t,x) \) ist \(\mu\)-integrierbar \(\forall t\in I\).
+		\item \( t\mapsto f(t,x) \) ist differenzierbar \(\forall x\in X\), 
+		Ableitung sei \(f'(t,x)\).
+		\item \( \exists \ \mu \)-integrierbare Funktion 
+		\( \eta \geq 0 \) auf \( X \) mit \( \abs{f(t,x)} \leq \eta(x) \;\forall t\in I, x\in X \).
+	\end{enumerate}
+	Dann ist die auf \(I\) definierte Funktion 
+	\( I \ni t \mapsto \int f(t,x) \;\mu(\text{d}x) \) 
+	differenzierbar und für alle \( t\in I \) 
+	ist \( x \mapsto f'(t,x)\ \mu \)-integrierbar und
+	es gilt 
+	\[ \varphi'(t) = \int f'(t,x) \;\mu(\text{d}{x}). \]
+\end{karte}

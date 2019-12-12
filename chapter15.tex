@@ -10,3 +10,31 @@
 \begin{karte}{Integral \(\mu\)-fast überall}
 	Sei \(f \in \mathcal{M}^+\). Dann gilt \( \int f \dmu = 0 \Leftrightarrow f = 0 \) \(\mu\)-fast überall.
 \end{karte}
+
+\begin{karte}{Integral über \(\mu\)-Nullmenge}
+	Jede \(\mathcal{A}\)-messbare Funktion \(f\) auf \(X\) ist 
+	über einer beliebigen \( \mu \)-Nullmenge \(N\) 
+	integrierbar und \( \int_N f \dmu = 0 \).
+\end{karte}
+
+\begin{karte}{\(\mu\)-fast überall gleiche Funktionen}
+	Seien \( f,g\ \mathcal{A} \)-messbare numerische Funktionen 
+	auf \(X\), welche \(\mu\)-fast überall gleich sind.
+	Dann gilt 
+	\begin{itemize}
+		\item \( f \geq 0, g\geq 0 : \int f \dmu = \int g \dmu \).
+		\item \(f\) ist integrierbar \( \Rightarrow\ g \) ist integrierbar und \( int f \dmu = \int g \dmu \). Funktioniert auch, wenn \(f,g\) komplexwertig sind.
+	\end{itemize}
+\end{karte}
+
+\begin{karte}{Majorante für Integrale}
+	Seien \( \abb{f}{X}{\bar{R}}, \abb{g}{X}{\bar{R}} \) 
+	und \(\abs{f} \leq g \ \mu\)-fast überall. 
+	Dann ist mit \(g\) auch \(f\) integrierbar.
+\end{karte}
+
+\begin{karte}{Umgekehrte Monotonie des Integrals}
+	Seien \( f,g \) integrierbare numerische Funktionen auf \(X\). 
+	Gilt \( \int_A f\dmu \leq \int_A g \dmu \;\forall A\in \mathcal{A} \Rightarrow f \leq g \ \mu \)-fast überall.\\
+	Gilt \gqq{\(=\)}, so folgt auch \(f = g\ \mu\)-fast überall.
+\end{karte}
