@@ -1,0 +1,30 @@
+\section*{\(\mathcal{L}^p\)-Räume}
+
+\begin{karte}{\(N_p\)}
+	Wir definieren die Abbildung 
+	\[ N_p(f) := (\int \abs{f}^p \dmu)^{1/p} \text{ für } 0 < p < \infty, \]
+	\[ N_\infty(f) := \inf \set{ k > 0 : \abs{f} < k \text{ fast überall} }. \]
+\end{karte}
+
+\begin{karte}{\(p\)-fach \(\mu\)-integrierbar}
+	Eine Abbildung \( \abb{f}{X}{\bar{R}} \) heißt \(p\)-fach \(\mu\)-integrierbar, falls 
+	\(f\) messbar und \( \abs{f}^p \) \( \mu \)-integrierbar ist.\\
+	Äquivalent \(f\) ist messbar \( \Leftrightarrow N_p(f) < \infty \).
+\end{karte}
+
+\begin{karte}{Menge aller \(p\)-fach \(\mu\)-integrierbarer Funktionen}
+	Sei \( (X, \mathcal{A}, \mu) \) ein Messraum. 
+	Die Räume \( \mathcal{L}_\mathbb{K}^p 
+	= \mathcal{L}_\mathbb{K}^p(X, \mathcal{A}, \mu) := \set{\abb{f}{X}{\mathbb{K}} \;|\; 
+	f \text{ messbar, } N_p(f) < \infty } \) nennen wir die Menge aller \(p\)-fach \(\mu\)-integrierbaren Funktionen.
+\end{karte}
+
+\begin{karte}{Hölder-Ungleichung}
+	Seien \(p, q\) dual, d. h. \(\frac{1}{p} + \frac{1}{q} = 1\) 
+	und \( 1 \leq p \leq \infty \). 
+	Seien \( f \in \mathcal{L}^p \) und 
+	\( g \in \mathcal{L}^q \) und 
+	\( \abb{f \cdot g}{X}{\mathbb{K}}, x \mapsto f(x) \cdot g(x) \) das punktweise Produkt.\\
+	Dann gilt \( f\cdot g \in \mathcal{L}^1 \) und 
+	\[ \abs{ \int f \cdot f \dmu } \leq \int \abs{f \cdot g} \dmu \leq N_p(f) N_q(g). \]
+\end{karte}
