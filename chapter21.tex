@@ -1,0 +1,36 @@
+\section*{Produkt-\(\sigma\)-Algebren}
+
+\begin{karte}{Produkt-\(\sigma\)-Algebra}
+    Die von den \( p_1, \ldots, p_n \) (Koordinatenprojektionen \(\abb{p_j}{X}{X_j}, (x_1,\ldots,x_n) \mapsto x_j\)) erzeugte 
+    \( \sigma\)-Algebra 
+    \[ \bigotimes_{j=1}^n \mathcal{A}_j 
+    = \mathcal{A}_1 \otimes \cdots \otimes \mathcal{A}_n 
+    := \sigma(p_1,\ldots, p_n) 
+    = \bigcap_{\substack{\mathcal{A} \ \sigma\text{-Alg. in }X\\ p_j \text{ ist \(\mathcal{A}\)-\(\mathcal{A}_j\)-messbar} }} \mathcal{A} \]
+    heißt das Produkt der \( \sigma \)-Algebren \( \mathcal{A}_1,\ldots, \mathcal{A}_n \). 
+    Sie ist also die kleinste \( \sigma \)-Algebra, für die alle \( p_j  \)
+    \( \mathcal{A} \)-\( \mathcal{A}_j \)-messbar sind.
+\end{karte}
+
+\begin{karte}{Erzeugendenprinzip für Produkt-\(\sigma\)-Algebra}
+    Seien \( \mathcal{E}_j \) Erzeuger von \( \mathcal{A}_j \)
+    in \(X_j\), für die es Folgen \( (E_{j,k})_k \subset \mathcal{E}_j \), 
+    \( E_{j,k} \uparrow X_j \) gibt.
+    Dann wird die \( \sigma \)-Algebra 
+    \( \mathcal{A}_1 \otimes \cdots \otimes \mathcal{A}_n \) 
+    von den Mengensystemen aller \( E_1 \times \cdots \times E_j \), 
+    \( E_j \in \mathcal{E}_j \) erzeugt.
+\end{karte}
+
+\begin{karte}{Maß auf Produkt-\(\sigma\)-Algebra}
+    Sei \( (X_k, \mathcal{A}_j, \mu_j) \) ein Maßraum und 
+    \( \mathcal{E}_j \) Erzeuger von \( \mathcal{A}_j \). 
+    Jeder Erzeuger \( \mathcal{E}_j \) sei \(\cap\)-stabil 
+    und enthalte eine Folge \( (E_{j,k})_k \subset \mathcal{E}_j, 
+    E_{j,k} \uparrow X_j \) und \( \mu(E_{j,k}) < \infty \).\\
+    Dann gibt es höchstens ein Maß \(\pi\) auf 
+    \( \mathcal{A}_1 \otimes \cdots \otimes \mathcal{A}_n \), 
+    für das gilt 
+    \[ \pi(E_1 \times \cdots \times E_n) 
+    = \mu_1(E_1) \cdots \mu_n(E_n). \]
+\end{karte}

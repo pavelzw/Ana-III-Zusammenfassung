@@ -1,0 +1,78 @@
+\section*{Konvergenzsätze auf \( \Lp \)}
+
+\begin{karte}{Pseudometrik, Konvergenz im \(p\)-Mittel}
+    Für \( f,g\in \Lp \) ist 
+    \( d_p (f,g) := \mathcal{N}_p(f - g) \)
+    die Pseudometrik. Für die Konvergenz im 
+    \(p\)-ten Mittel/\(\Lp\)-Konvergenz gilt:\\
+    Ist \( (f_n)_n \) eine Folge in \( \Lp \), 
+    so konvergiert diese im \( p \)-ten Mittel gegen 
+    \( f \in \Lp \), wenn 
+    \[ \limes{n} d_p(f_n, f) = \limes{n} \mathcal{N}_p(f - f_n) = 0. \]
+\end{karte}
+
+\begin{karte}{Konvergenz im \(p\)-Mittel und Integrale}
+    Für jede Folge \( (f_n)_n \subset \Lp \), welche 
+    im \( p \)-Mittel gegen \( f\in \Lp \) konvergiert, 
+    git für alle \( A \in \mathcal{A} \):
+    \begin{enumerate}
+        \item \( p = 1 \): \( \limes{n} \int_A f_n \dmu = \int_A f \dmu \).
+        \item \( 1<p<\infty \): \( \limes{n} \int_A \abs{f_n}^p \dmu = \int_A \abs{f}^p \dmu \).
+    \end{enumerate}
+\end{karte}
+
+\begin{karte}{Konvergenz in \( \Lp \)}
+    \( (f_n)_n\subset \Lp, 1 \leq p < \infty \) 
+    konvergiere \( \mu \)-fast überall gegen \( f\in\Lp \). 
+    Dann gilt 
+    \[ \limes{n} \int \abs{f_n}^p \dmu = \int \abs{f}^p \dmu 
+    \Leftrightarrow f_n \rightarrow f \text{ in }\Lp. \]
+\end{karte}
+
+\begin{karte}{\( \Delta \)-Ungleichung für \( \mathcal{N}_p \)}
+    Sei \( (f_n)_n \subset \mathcal{M}^+(X, \mathcal{A})
+    \Rightarrow \forall 1 \leq p < \infty: \)
+    \[ \mathcal{N}_p(\sum_{n=1}^\infty f_n) \leq \sum_{n=1}^\infty \mathcal{N}_p(f_n). \]
+\end{karte}
+
+\begin{karte}{Majorisierte Konvergenz}
+    Sei \( (f_n)_n \subset \Lp(X, \mathcal{A}, \mu) \) 
+    für \( 1 \leq p < \infty \) \( \mu \)-fast überall konvergent 
+    und es gebe ein \( 0 \leq g \in \Lp \) mit 
+    \( f_n \leq g \ \mu \)-fast überall.\\
+    Dann gibt es eine Funktion \( f \) auf \(X\), 
+    gegen die \(f_n\) \( \mu \)-fast überall konvergiert. 
+    Jede solche Funktion ist in \( \Lp \) und 
+    \( (f_n)_n \) konvergiert im \(p\)-ten Mittel gegen \(f\), 
+    d. h. \( \limes{n} \int \abs{f_n - f}^p \dmu = 0 \).
+\end{karte}
+
+\begin{karte}{Vollständigkeit von \( \Lp \)}
+    Sei \( 1 \leq p \leq \infty \) und \( (f_n)_n \subset \Lp \)
+    eine Cauchyfolge. Dann existiert ein \( f\in \Lp \), 
+    gegen das \( (f_n)_n \) im \(p\)-ten Mittel konvergiert. 
+    Eine geeignete Teilfolge konvergiert \(\mu\)-fast überall gegen \(f\).
+\end{karte}
+
+\begin{karte}{Cauchyfolgen in \( \Lp \)}
+    Eine Cauchyfolge \( (f_n)_n \subset \Lp \) konvergiere 
+    \( \mu \)-fast überall gegen eine \( \mathcal{A} \)-messbare Funktion 
+    \(f\). Dann gilt 
+    \( f\in \Lp \) und \( (f_n)_n \) konvergiert gegen \(f\) in \(\Lp\).
+\end{karte}
+
+\begin{karte}{Duale Konvergenz}
+    Sei \( (f_n)_n \subset \Lp, (g_n)_n \subset \mathcal{L}^q, 
+    1 < p < \infty \) und \( \frac{1}{p} + \frac{1}{q} = 1 \).\\
+    \( f_n \rightarrow f \) in \(\Lp\), 
+    \( g_n \rightarrow g \) in \( \mathcal{L}^q \).
+    \( \Rightarrow f_n \cdot g_n \rightarrow f \cdot g \) in \( \mathcal{L}^1 \).
+\end{karte}
+
+\begin{karte}{\( \Lp \subset \mathcal{L}^1 \)}
+    Sei \( (X, \mathcal{A}, \mu) \) ein endlicher Maßraum. 
+    Dann ist \( \Lp \subset \mathcal{L}^1 \;\forall p \geq 1 \) und 
+    ist \( (f_n)_n \subset \Lp, f_n \rightarrow f \) in \(\Lp\), 
+    dann ist auch \( f \in \mathcal{L}^1 \) und 
+    \( f_n \rightarrow f \) in \( \mathcal{L}^1 \).
+\end{karte}

@@ -1,0 +1,23 @@
+\section*{Produktmaße, Fubini und Tunelli}
+
+\begin{karte}{Schnitt von Produkt-\(\sigma\)-Algebra}
+    Gegeben zwei Messräume \( (X_j,\mathcal{A}_j) \).
+    Für beliebige \( x_1 \in X_1, x_2 \in X_2 \) 
+    liegen alle \(x_1\)- bzw. \(x_2\)-Schnitte einer Menge 
+    (\( Q_{x_1} := \set{x_2 \in X_2 \;|\; (x_1,x_2)\in Q} \))
+    \( W \in \mathcal{A}_1 \times \mathcal{A}_2 \) 
+    in \(\mathcal{A}_2\) bzw. \( \mathcal{A}_1 \).
+\end{karte}
+
+\begin{karte}{Messbarkeit der Schnittfunktion}
+    Die Maße \( \mu_1, \mu_2 \) seien \( \sigma \)-endlich. 
+    So gilt \( \forall Q \in \mathcal{A}_1 \otimes \mathcal{A}_2 \) 
+    ist die Funktion 
+    \[ x_1 \mapsto \mu_2(Q_{x_1}) \ \mathcal{A}_1\text{-messbar}, \]
+    \[ x_2 \mapsto \mu_1(Q_{x_2}) \ \mathcal{A}_2\text{-messbar}. \]
+    Außerdem gilt dann 
+    \( \pi_1(Q) := \int_{X_1} \mu_2(Q_{x_1}) \mu_1(\mathrm{d}x_1) \)
+    und \\
+    \( \pi_1(Q) := \int_{X_2} \mu_1(Q_{x_2}) \mu_2(\mathrm{d}x_2) \)
+    sind nach Eindeutigkeit gleich.
+\end{karte}

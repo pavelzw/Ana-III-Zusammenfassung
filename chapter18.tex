@@ -19,6 +19,13 @@
 	f \text{ messbar, } N_p(f) < \infty } \) nennen wir die Menge aller \(p\)-fach \(\mu\)-integrierbaren Funktionen.
 \end{karte}
 
+\begin{karte}{Youngsche Ungleichung}
+	Es seien \( p,q\in (1,\infty) \) duale Koeffizienten, d. h. 
+	\( 1 = \frac{1}{p} + \frac{1}{q} \). \\
+	Dann gilt \( A \cdot B \leq \frac{A^p}{p} + \frac{B^p}{p} 
+	\;\forall A,B\geq 0 \).
+\end{karte}
+
 \begin{karte}{Hölder-Ungleichung}
 	Seien \(p, q\) dual, d. h. \(\frac{1}{p} + \frac{1}{q} = 1\) 
 	und \( 1 \leq p \leq \infty \). 
@@ -27,4 +34,16 @@
 	\( \abb{f \cdot g}{X}{\mathbb{K}}, x \mapsto f(x) \cdot g(x) \) das punktweise Produkt.\\
 	Dann gilt \( f\cdot g \in \mathcal{L}^1 \) und 
 	\[ \abs{ \int f \cdot f \dmu } \leq \int \abs{f \cdot g} \dmu \leq N_p(f) N_q(g). \]
+\end{karte}
+
+\begin{karte}{Minkowski-Ungleichung oder \( \Delta \)-Ungleichung für \( \mathcal{N}_p \)}
+	Seien \( \abb{f,g}{X}{\bar{\R}} \) (oder \(\C\)) messbar, dann gilt 
+	\( \mathcal{N}_p(f+g) \leq \mathcal{N}_p(f) + \mathcal{N}_p(g) \).\\
+	Im Fall der Gleichheit für \( 1 < p < \infty \) existiert ein \(\lambda > 0\) 
+	mit \( g = \lambda f \) oder \( f = \lambda g \) \(\mu\)-fast überall.
+\end{karte}
+
+\begin{karte}{\( \mathcal{L}^1 \subset \mathcal{L}^p \)}
+	Sei \( (X,\mathcal{A}, \mu) \) ein Maßraum und \( \mu(X) < \infty 
+	\Rightarrow \mathcal{L}^1 \subset \mathcal{L}^p \;\forall 1 \leq p \leq \infty \). 
 \end{karte}
