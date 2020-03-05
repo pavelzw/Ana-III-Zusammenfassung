@@ -1,0 +1,45 @@
+\subsection*{Die Transformationsformel}
+
+\begin{karte}{Messbarkeit Lineare Bijektionen}
+    Sei \( \abb{T}{\R^m}{\R^m} \) eine lineare Bijektion 
+    \( \Rightarrow T(B) \in \mathcal{B}^m \;\forall B\in \mathcal{B}^m \).
+\end{karte}
+
+\begin{karte}{Transformation Lebesgue-Maß}
+    Sei \( \abb{T}{\R^m}{\R^m} \) linear und bijektiv, 
+    dann ist 
+    \[ \lambda^n(T(B)) = \abs{\det T} \lambda^m(B). \]
+\end{karte}
+
+\begin{karte}{Operatornorm}
+    Sei \( \abb{T}{\R^n}{\R^m} \) linear. Es sei weiterhin 
+    \( ||\cdot|| \) die euklidische Norm auf \(\R^n \) oder \(\R^m\). 
+    \[ ||T|| := \sup\set{||Tx||:x\in \R^n, ||x||\leq 1}. \]
+    Es gilt 
+    \( ||Tx|| \leq ||T|| ||x|| \).
+\end{karte}
+
+\begin{karte}{Diffeomorphismus}
+    Ein Diffeomorphismus ist eine bijektiv stetig differenzierbare Abbildung, 
+    deren Umkehrabbildung auch stetig differenzierbar ist.
+\end{karte}
+
+\begin{karte}{Transformationsformel}
+    Sei \( U,V\subset \R^m \) offen und \( \abb{\varphi}{U}{V} \) 
+    ein \( \mathcal{C}^1 \)-Diffeomorphismus (insb. \( \det D\varphi \) nullstellenfrei auf \(U\)), 
+    \(V = \varphi(U)\). Dann gilt 
+    \begin{enumerate}
+        \item \( \forall A \subset \mathcal{B}_U^m = U \cap \mathcal{B}^m\) (Spur-\(\sigma\)-Algebra) ist 
+        \[ \lambda^m(\varphi(A)) = \int_A \abs{\det D\varphi} \dx{\lambda^m}. \]
+        \item \( \forall f\in \mathcal{M}^+(V, \mathcal{B}_V^m) 
+        = \mathcal{M}^+(V, V \cap \mathcal{B}^m) \) gilt 
+        \[ \int_V f \dx{\lambda^m} = \int_{\varphi U} f \dx{\lambda^m} 
+        = \int_U f\circ \varphi \abs{\det D\varphi} \dx{\lambda^m}. \]
+    \end{enumerate}
+\end{karte}
+
+\begin{karte}{Lemma Transformationsformel}
+    Seien \(U, V \subset \R^m\) offen und \( \abb{\varphi}{U}{V} \) ein 
+    \( \mathcal{C}^1 \)-Diffeomorphismus. Dann gilt 
+    \[ \forall I \in \mathcal{H}: \lambda^m(\varphi(I)) \leq \int_I \abs{\det D\varphi} \dx{\lambda^m}. \]
+\end{karte}

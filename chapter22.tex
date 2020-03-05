@@ -5,7 +5,7 @@
     Für beliebige \( x_1 \in X_1, x_2 \in X_2 \) 
     liegen alle \(x_1\)- bzw. \(x_2\)-Schnitte einer Menge 
     (\( Q_{x_1} := \set{x_2 \in X_2 \;|\; (x_1,x_2)\in Q} \))
-    \( W \in \mathcal{A}_1 \times \mathcal{A}_2 \) 
+    \( W \in \mathcal{A}_1 \otimes \mathcal{A}_2 \) 
     in \(\mathcal{A}_2\) bzw. \( \mathcal{A}_1 \).
 \end{karte}
 
@@ -18,6 +18,82 @@
     Außerdem gilt dann 
     \( \pi_1(Q) := \int_{X_1} \mu_2(Q_{x_1}) \mu_1(\mathrm{d}x_1) \)
     und \\
-    \( \pi_1(Q) := \int_{X_2} \mu_1(Q_{x_2}) \mu_2(\mathrm{d}x_2) \)
+    \( \pi_2(Q) := \int_{X_2} \mu_1(Q_{x_2}) \mu_2(\mathrm{d}x_2) \)
     sind nach Eindeutigkeit gleich.
+\end{karte}
+
+\begin{karte}{Prinzip von Cavalieri}
+    Seien \( (X_j, \mathcal{A}_j, \mu_j) \) \(\sigma\)-endliche Maßräume, \(j=1,2\).
+    
+    Dann existiert genau ein Maß \(\pi\) auf \( \mathcal{A}_1 \otimes \mathcal{A}_2 \) 
+    mit 
+    \[ \pi(A_1 \times A_2) = \mu_1(A_1) \mu_2(A_2) \]
+    \( \forall A_1\in \mathcal{A}_1, A_2 \in \mathcal{A}_2 \) und 
+    für jede Menge \(Q \in \mathcal{A}_1 \otimes \mathcal{A}_2\) gilt:
+    \[ \pi(Q) = \int_{X_1} \mu_2(Q_{x_1}) \mu_1(\mathrm{d}x_1) 
+    = \int_{X_2} \mu_1(Q_{x_2}) \mu_2(\mathrm{d}x_2). \]
+\end{karte}
+
+\begin{karte}{Produktmaß}
+    Das für je zwei \(\sigma\)-endliche Maßräume \( ( X_j, \mathrm{A}_j, \mu_j ) \)
+    eindeutig bestimmte Maß \( \pi \) auf \( \mathcal{A}_1 \otimes \mathcal{A} \)
+    heißt das Produkt der Maße \( \mu_1 \) und \( \mu_2 \). Wir schreiben \( \pi = \mu_1 \otimes \mu_2 \).
+\end{karte}
+
+\begin{karte}{\(x_i\)-Schnitt in Funktionen}
+    Zu \( \abb{f}{X_1\times X_2}{Y} \) ist 
+    \( \abb{f_{x_1}}{X_2}{Y}, x_2 \mapsto f_{x_1}(x_2) = f(x_1, x_2) \) der \( x_1 \)-Schnitt in \(f\).
+
+    Analog \(x_2\)-Schnitt.
+
+    Ist \( f = \mathds{1}_Q, Q \subset X_1 \times X_2 \), so ist 
+    \( f_{x_1} = \mathds{1}_{Q_{x_1}} \) auf \(X_2\) und \( f_{x_2} = \mathds{1}_{Q_{x_2}} \) 
+    auf \(X_1\).
+\end{karte}
+
+\begin{karte}{Messbarkeit \(x_i\)-Schnitt in Funktionen}
+    Sei \( (X', \mathcal{A}') \) ein beliebiger Maßraum 
+    und \( \abb{f}{(X_1\times X_2, \mathcal{A}_1 \otimes \mathcal{A}_2)}{(X', \mathcal{A}')} \)
+    eine messbare Abbildung. Dann ist jede der Abbildungen \( f_{x_1} \) bzw. \( f_{x_2} \)
+    \( \mathcal{A}_1 \)- bzw. \(\mathcal{A}_2\)-messbar.
+\end{karte}
+
+\begin{karte}{Satz von Tonelli}
+    Seien \( (X_j, \mathcal{A}_j, \mu_j), j=1,2 \) \(\sigma\)-endliche Maßräume 
+    und \( \abb{f}{X_1 \times X_2}{[0,\infty]} \) eine positive messbare 
+    numerische Funktion. Dann gilt: die Funktionen \( x_2 \mapsto \int f_{x_2} \mathrm{d}\mu_1 \)
+    und \( x_1 \mapsto \int f_{x_1} \mathrm{d}\mu_2 \) sind \( \mathcal{A}_2 \)- bzw. 
+    \( \mathcal{A}_1 \)-messbar und es gilt 
+
+    \begin{align*}
+        \int_{X_1\times X_2} f \mathrm{d}(\mu_1\otimes\mu_2) &= \int \left( \int f_{x_2}\mathrm{d}\mu_1 \right) \mathrm{d}\mu_2 = \int_{X_2} \left( \int_{X_1} f(x_1, x_2) \mu_1(\mathrm{d}x_1) \right) \mu_2(\mathrm{d}x_2) \\
+        &= \int \left(\int f_{x_1} \mathrm{d}\mu_2 \right) \mathrm{d}\mu_1 = \int_{X_1} \left( \int_{X_2} f(x_1, x_2) \mu_2(\mathrm{d}x_2) \right) \mu_1(\mathrm{d}x_1)
+    \end{align*}
+\end{karte}
+
+\begin{karte}{Satz von Fubini}
+    Seien \( (X_j, \mathcal{A}_j, \mu_j), j=1,2 \) \(\sigma\)-endliche 
+    Maßräume und \(f\) eine \(\mu_1 \otimes \mu_2\) integrierbare numerische 
+    Funktion auf \( X_1 \otimes X_2 \). Dann folgt 
+    \begin{center}
+        \( f_{x_1} \) ist für \( \mu_1 \)-fast alle \(x_1\) \(\mu_2\)-integrierbar\\
+        \(f_{x_2}\) ist für \( \mu_2 \)-fast alle \(x_2\) \(\mu_1\)-integrierbar,
+    \end{center}
+    die Funktionen 
+    \[ x_1 \mapsto \int_{X_2} f_{x_1} \dx{\mu_2}, \quad x_2\mapsto \int_{X_1} f_{x_2} \dx{\mu_1} \]
+    sind \(\mu_1\)- bzw. \(\mu_2\)-fast überall definiert und es gilt 
+    \begin{align*}
+        \int_{X_1\times X_2} f \mathrm{d}(\mu_1\otimes\mu_2) &= \int \left( \int f_{x_2}\mathrm{d}\mu_1 \right) \mathrm{d}\mu_2 = \int_{X_2} \left( \int_{X_1} f(x_1, x_2) \mu_1(\mathrm{d}x_1) \right) \mu_2(\mathrm{d}x_2) \\
+        &= \int \left(\int f_{x_1} \mathrm{d}\mu_2 \right) \mathrm{d}\mu_1 = \int_{X_1} \left( \int_{X_2} f(x_1, x_2) \mu_2(\mathrm{d}x_2) \right) \mu_1(\mathrm{d}x_1)
+    \end{align*}
+\end{karte}
+
+\begin{karte}{Layer-Cake-Principle}
+    Sei \( (X, \mathcal{A}, \mu) \) ein \(\sigma\)-endlicher Maßraum, 
+    \( \abb{f}{[0,\infty)}{[0,\infty)} \) eine messbare 
+    positive reelle Funktion \( \abb{\varphi}{[0,\infty)}{[0,\infty)}, \varphi(0)= 0 \)
+    eine stetig wachsende Funktion, die stetig differenzierbar auf \((0,\infty)\) ist. 
+    Dann folgt: 
+    \[ \int \varphi \circ f \dmu = \int_{(0,\infty)} \varphi'(t) \mu(\set{f\geq t}) \;\lambda^1(\mathrm{d}t) 
+    = \int_0^\infty \varphi'(t) \mu(\set{f\geq t}) \dx{t}. \]
 \end{karte}
