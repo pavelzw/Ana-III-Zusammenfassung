@@ -1,0 +1,45 @@
+\section*{Grunlagen Untermannigfaltigkeiten}
+
+\begin{karte}{Untermannigfaltigkeiten}
+    \(M\subset \R^n\) heißt \(k\)-dimensionale Untermannigfaltigkeit, 
+    falls zu jedem \(p \in M\) eine offene Umgebung \(W \subset \R^n\) und 
+    ein \( \mathcal{C}^1 \)-Diffeomorphismus \( \abb{\phi}{W}{\R^n} \) existiert, sodass 
+    \[ \abb{\phi}{M\cap W}{\R^k \times \set{0}} \cap \phi(W) \quad \text{(\gqq{lokale Plättung})} \]
+\end{karte}
+
+\begin{karte}{Untermannigfaltigkeitskriterium}
+    Seien \( 1\leq k < n, k,n\in\N, M \subset \R^n \). Dann sind folgende Aussagen 
+    äquivalent:
+    \begin{enumerate}
+        \item \(M\) ist eine \(k\)-dimensionale Untermannigfaltigkeit.
+        \item Niveaumengenkriterium: zu \(p\in M \exists \) affine \(W\subset \R^n, 
+        h \in \mathcal{C}^1(W, \R^{n-k}): \rk Dh = n-k, M\cap W = \set{q\in W \;|\; h(q) = 0} \).
+        \item Graphenkriterium: zu \(p\in M\) gibt es, nach Umnummerierung der 
+        Koordinaten, eine offene Umgebung \( U \times V \subset \R^k \times \R^{n\times k} \)
+        und \( u\in \mathcal{C}^1(U,V): M\cap (U\times V) = \set{(x,u(x)) \;|\; x\in U} \).
+    \end{enumerate}
+\end{karte}
+
+\begin{karte}{\(\sigma\)-Kompaktheit von Untermannigfaltigkeiten}
+    Jede \(k\)-dimensionale Untermannigfaltigkeit ist eine abzählbare 
+    Vereinigung von kompakten Mengen \( K_j \subset M: M = \bigcup_{j=1}^\infty K_j \).
+\end{karte}
+
+\begin{karte}{Karte und Atlas}
+    Sei \( M \) eine \(k\)-dimensionale Untermannigfaltigkeit von \(\R^k\). 
+    
+    Karte: Sei \( k = 1,\ldots, n \). 
+    Das Paar \( (\varphi, U) \) heißt Karte (für \(M\)), falls \( U \subset \R^k \) offen.
+    Immersion ist \( \varphi \in \mathcal{C}^1(U, \R^k) \) mit \( \varphi(U) \subset M, 
+    \abb{\varphi}{U}{\varphi(U)} \) Homöomorphismus (auch lokale Parametrisierung).
+
+    Eine Familie \( (\varphi_\alpha, U_\alpha)_{\alpha\in A} \) von Karten 
+    heißt Atlas, falls \( \bigcup_{\alpha \in A} \varphi_\alpha(U_\alpha) = M \) ist. 
+    Der Atlas heißt endlich/abzählbar, falls die Indexmenge endlich/abzählbar ist.
+\end{karte}
+
+\begin{karte}{Atlas von \(\mathcal{C}^1\)-Untermannigfaltigkeit}
+    Für jede \( \mathcal{C}^1 \)-Untermannigfaltigkeit \(M\subset \R^n\) gibt es 
+    immer einen abzählbaren Atlas. 
+    Außerdem: jedes \( p\in M \) liegt in endlich vielen Mengen \( \varphi_\alpha(U_\alpha) \).
+\end{karte}

@@ -1,0 +1,31 @@
+\section*{Satz von Gauß}
+
+\begin{karte}{Satz von Gauß}
+    Definiere \( \nu(x) = \frac{\nabla G(x)}{\abs{\nabla G(x)}} \) als die 
+    äußere Normale (lokal). Sei weiterhin \( A \subset \R^n \) offen, beschränkt und 
+    \( \partial_r A = \partial A \). Dann gilt für \(F \in \varphi(\bar{A}, \R^n) \cap \varphi'(A, \R^n)\):
+    \[ \div F = \sum_{j=1}^n \partial_j F_j \in \mathcal{L}^1(A). \]
+    \[ \Rightarrow \int_A \div F \dx{\lambda^n} = \int_{\partial A} F \cdot \nu \dx{S_{\partial A}{n-1}}. \]
+\end{karte}
+
+\begin{karte}{\( \sup(f) \)}
+    Sei \( W\in \R^n \) offen, \(f \in \mathcal{C}_c^1(W) = \sup(f) = \overline{\set{x\;|\;f(x) \neq 0}} \). Dann gilt 
+    \[ \int_W \frac{\partial f}{\partial x_i} \dx{\lambda^n} = 0 \ i=1,\ldots, n. \]
+\end{karte}
+
+\begin{karte}{Lokale Version von Gauß}
+    Sei \(V \subset \R^{n-1}\) offen und beschränkt, 
+    \( \psi \in \mathcal{C}^1(V), A = \set{x\in \R^n : x'\in V, x_n \subset \psi(x') } \), 
+    \(\R^n \ni x = (x', x_n) \in \R^{n-1}\times \R \), 
+    \( F \in \mathcal{C}^1(A, \R^n) \cap \mathcal{C}(\bar{A}, \R^n) \), sodass 
+    \( \div F \in \mathcal{L}^1(A) \) und es gebe \(K \in V \times \R\) kompakt mit 
+    \(F = 0\) in \(A \setminus K\).
+
+    \[ \Rightarrow \int_A \div F \dx{\lambda^n} = \int_{\partial A} F \cdot \nu \dx{S^{n-1}}. \]
+\end{karte}
+
+\begin{karte}{Glatte Zerlegung der Eins}
+    Sei \(K\) kompakt und seien \( U_0,\ldots, U_J \) endlich viele offene Mengen, 
+    die \(A\) überdecken, also \( A \subset \bigcup_{j=0}^J U_j \). Dann gilt 
+    \[ \exists \text{Funktion } \Theta_j \in \mathcal{C}^\infty_0(U_j, [0,1]) \text{ mit } \sum_{j=0}^J \Theta_j(x) = 1 \;\forall x\in A. \]
+\end{karte}

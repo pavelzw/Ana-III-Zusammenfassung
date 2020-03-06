@@ -35,6 +35,11 @@
         = \mathcal{M}^+(V, V \cap \mathcal{B}^m) \) gilt 
         \[ \int_V f \dx{\lambda^m} = \int_{\varphi U} f \dx{\lambda^m} 
         = \int_U f\circ \varphi \abs{\det D\varphi} \dx{\lambda^m}. \]
+        \item \( \abb{f}{V}{\bar{\R}} \) ist \( \lambda^1 \)-integrierbar 
+        \( \Leftrightarrow f \circ \varphi \abs{\det D\varphi} \) 
+        ist über \(U\) \(\lambda^m\)-integrierbar. Dann gilt 
+        \[ \int_V d \dx{\lambda^m} = \int_{\varphi(U)} f \dx{\lambda^m} 
+        = \int_U f \circ \varphi \abs{\det D\varphi} \dx{\lambda^m}. \]
     \end{enumerate}
 \end{karte}
 
@@ -42,4 +47,28 @@
     Seien \(U, V \subset \R^m\) offen und \( \abb{\varphi}{U}{V} \) ein 
     \( \mathcal{C}^1 \)-Diffeomorphismus. Dann gilt 
     \[ \forall I \in \mathcal{H}: \lambda^m(\varphi(I)) \leq \int_I \abs{\det D\varphi} \dx{\lambda^m}. \]
+\end{karte}
+
+\begin{karte}{Abschätzung Transformation}
+    \( \forall A \in \mathcal{B}_U^m \) ist \( \lambda^m(\varphi(A)) 
+    \leq \int_A \abs{\det D\varphi} \dx{\lambda^m} \).
+
+    \( \forall f \in \mathcal{M}^+(V, \mathcal{B}_V^m) \) ist, 
+    \(U, V \subset \R^m\) offen, \(\abb{\varphi}{U}{U}\) Diffeomorphismus. 
+    \[ \int_V f \dx{\lambda^m} = \int_{\varphi(U)} f \dx{\lambda^m} 
+    \leq \int_U f\circ \varphi \abs{\det D\varphi} \dx{\lambda^m}. \]
+\end{karte}
+
+\begin{karte}{Polarkoordinaten in \(\R^2\)}
+    Seien \( U = (0,\infty) \times (0,2\pi), V = \R^2 \setminus ([0,\infty) \times \set{0}) \). 
+    \( \abb{\varphi}{U}{V}, (r,\vartheta) \mapsto \varphi(r,\vartheta) 
+    = (r \cos \vartheta, r \sin \vartheta)^t \).
+    \[ D\varphi(r,\vartheta) = \begin{pmatrix}
+        \cos\vartheta & -r\sin \vartheta \\
+        \sin \vartheta & r \cos \vartheta
+    \end{pmatrix}, \quad \det D\varphi = r > 0. \]
+
+    \[ \int_{\R^2} f\dx{\lambda^2} = \int_V f \dx{\lambda^2} 
+    = \int_U f\circ \varphi \abs{r} \dx{\lambda^2}(r,\vartheta)
+    = \int_U f(r \cos\vartheta, r\sin\vartheta)\dx{\lambda^2}(r,\vartheta). \]
 \end{karte}

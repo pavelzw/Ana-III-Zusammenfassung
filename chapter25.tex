@@ -1,0 +1,35 @@
+\section*{Integration auf Mengen durch Karten}
+
+\begin{karte}{Polarzerlegung}
+    Wir definieren die Menge 
+    \[ \mathrm{O}(k,n) := \set{\text{ längenerhaltende Abb. } \abb{Q}{\R^k}{\R^n}}
+    = \set{ Q \in \R^{n\times k} \;|\; QQ^T = I_k }. \]
+    Es gilt ist \(R \in \R^{n\times k}, \rk(T) = k \Rightarrow 
+    \exists Q\in\mathrm{O}(k,n) \) und eine positiv definite symmetrische Matrix 
+    \( \abs{T} \in \R^{k\times k} \) mit 
+    \[ T = Q\abs{T}, \quad \abs{T}^2 = T^T T, \quad \det \abs{T} = \sqrt{\det T^T T}^{1/2}. \]
+\end{karte}
+
+\begin{karte}{\( \zeta_k \) und \(S^k(E)\)}
+    \[ \zeta_k := \set{ E \subset \varphi(V): \varphi^{-1}(E) \in \mathcal{B}^m }. \]
+    \[ S^k(E) := \int_{\varphi^{-1}(E)} (\det(D\varphi^t D\varphi))^{1/2} \dx{\lambda^k}. \]
+\end{karte}
+
+\begin{karte}{Eigenschaften von \( \zeta_k \) und \(S^k\)}
+    \begin{enumerate}
+        \item \( \zeta_k \) ist eine \(\sigma\)-Algebra.
+        \item \( \abb{S^k}{\zeta_k}{[0,\infty]} \) ist ein Maß.
+        \item \( \zeta_k \) und \(S^k\) hängen nur von der Menge \( \varphi(V) \) ab. 
+        D. h. ist \(V' \subset \R^k\) offen und \( \varphi'\in \mathcal{C}(V', \R^n) \) 
+        eine Immersion sowie \( \abb{\varphi'}{V'}{\varphi(V')} \) 
+        ein Homöomorphismus mit \(\varphi(V) = \varphi'(V')\), so folgt 
+        \[ E \in \zeta_k \Leftrightarrow \varphi'^{-1}(E) \notin \mathcal{B}^n, \]
+        \[ \int_{\varphi^{-1}(E)} \left(\det D^t_\varphi D_\varphi\right)^{1/2} \dx{\lambda^k} 
+        = \int_{\varphi'^{-1}(E)} \left( \det D'^t_\varphi D'_\varphi \right) \dx{\lambda^k}. \]
+    \end{enumerate}
+\end{karte}
+
+\begin{karte}{Schreibweise von \( (D^t_\varphi D_\varphi)_{i,j} \)}
+    Man kann \( (D^t_\varphi D_\varphi)_{i,j} \) schreiben als 
+    \[ (D^t_\varphi D_\varphi)_{i,j} = \langle \partial_i \varphi, \partial_j \varphi \rangle_\R^n. \]
+\end{karte}
