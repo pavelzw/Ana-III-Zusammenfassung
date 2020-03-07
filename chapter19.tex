@@ -1,5 +1,10 @@
 \section*{Konvergenzsätze auf \( \Lp \)}
 
+\begin{karte}{Hauptsatz für die Integral- und Differentialrechnung}
+	Sei \( \abb{f}{[a,b]}{\R} \) differenzierbar und \(f'\) beschränkt. \\
+	\( \int_{[a,b]} f' \dx{\lambda^1} = f(b) - f(a) \).
+\end{karte}
+
 \begin{karte}{Pseudometrik, Konvergenz im \(p\)-Mittel}
     Für \( f,g\in \Lp \) ist 
     \( d_p (f,g) := \mathcal{N}_p(f - g) \)
@@ -14,7 +19,7 @@
 \begin{karte}{Konvergenz im \(p\)-Mittel und Integrale}
     Für jede Folge \( (f_n)_n \subset \Lp \), welche 
     im \( p \)-Mittel gegen \( f\in \Lp \) konvergiert, 
-    git für alle \( A \in \mathcal{A} \):
+    gilt für alle \( A \in \mathcal{A} \):
     \begin{enumerate}
         \item \( p = 1 \): \( \limes{n} \int_A f_n \dmu = \int_A f \dmu \).
         \item \( 1<p<\infty \): \( \limes{n} \int_A \abs{f_n}^p \dmu = \int_A \abs{f}^p \dmu \).
@@ -32,19 +37,21 @@
 \begin{karte}{\( \Delta \)-Ungleichung für \( \mathcal{N}_p \)}
     Sei \( (f_n)_n \subset \mathcal{M}^+(X, \mathcal{A})
     \Rightarrow \forall 1 \leq p < \infty: \)
-    \[ \mathcal{N}_p(\sum_{n=1}^\infty f_n) \leq \sum_{n=1}^\infty \mathcal{N}_p(f_n). \]
+    \[ \mathcal{N}_p\left(\sum_{n=1}^\infty f_n\right) \leq \sum_{n=1}^\infty \mathcal{N}_p(f_n). \]
 \end{karte}
 
 \begin{karte}{Majorisierte Konvergenz}
     Sei \( (f_n)_n \subset \Lp(X, \mathcal{A}, \mu) \) 
     für \( 1 \leq p < \infty \) \( \mu \)-fast überall konvergent 
     und es gebe ein \( 0 \leq g \in \Lp \) mit 
-    \( f_n \leq g \ \mu \)-fast überall.\\
+    \( |f_n| \leq g \ \mu \)-fast überall.\\
     Dann gibt es eine Funktion \( f \) auf \(X\), 
     gegen die \(f_n\) \( \mu \)-fast überall konvergiert. 
     Jede solche Funktion ist in \( \Lp \) und 
     \( (f_n)_n \) konvergiert im \(p\)-ten Mittel gegen \(f\), 
     d. h. \( \limes{n} \int \abs{f_n - f}^p \dmu = 0 \).
+
+    Es gilt inbesondere \(\limes{n} \int \abs{f_n}^p \dmu = \int \abs{f}^p \dmu \).
 \end{karte}
 
 \begin{karte}{Vollständigkeit von \( \Lp \)}
@@ -52,9 +59,7 @@
     eine Cauchyfolge. Dann existiert ein \( f\in \Lp \), 
     gegen das \( (f_n)_n \) im \(p\)-ten Mittel konvergiert. 
     Eine geeignete Teilfolge konvergiert \(\mu\)-fast überall gegen \(f\).
-\end{karte}
 
-\begin{karte}{Cauchyfolgen in \( \Lp \)}
     Eine Cauchyfolge \( (f_n)_n \subset \Lp \) konvergiere 
     \( \mu \)-fast überall gegen eine \( \mathcal{A} \)-messbare Funktion 
     \(f\). Dann gilt 
@@ -75,4 +80,6 @@
     ist \( (f_n)_n \subset \Lp, f_n \rightarrow f \) in \(\Lp\), 
     dann ist auch \( f \in \mathcal{L}^1 \) und 
     \( f_n \rightarrow f \) in \( \mathcal{L}^1 \).
+
+	Allgemein: falls \( 1 \leq p \leq q \), so gilt \( \mathcal{L}^q \subset \mathcal{L}^p \).
 \end{karte}

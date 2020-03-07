@@ -54,8 +54,8 @@
 		\item \( \abb{\eta}{\mathcal{P}(X)}{[0,\infty]} \) ist ein äußeres Maß 
 		und alle Mengen aus \( \mathcal{H} \) sind \(\eta\)-messbar.
 		\item Ist \(\mu\) ein Prämaß, so gilt \( \eta|_{\mathcal{H}} = \mu \) 
-		und somit ist \( \eta|_{\mathcal{A}_n} \) eine Fortsetzung von \(\mu\) 
-		zu einem Maß auf der \( \sigma \)-Algebra \( \mathcal{A}_n \), die 
+		und somit ist \( \eta|_{\mathcal{A}_\eta} \) eine Fortsetzung von \(\mu\) 
+		zu einem Maß auf der \( \sigma \)-Algebra \( \mathcal{A}_\eta \), die 
 		\( \mathcal{H} \) und somit auch \( \sigma(\mathcal{H}) \) enthält.
 		\item Ist \(\mu\) kein Prämaß, so gibt es \( A\in \mathcal{H} \) 
 		mit \( \eta(A) \leq \mu(A)\).
@@ -75,18 +75,15 @@
 	\( F_\mu(x) := \mu((-\infty,x]) \) eine Verteilungsfunktion.
 \end{karte}
 
-\begin{karte}{Eigenschaften Verteilungsfunktion (TODO)}
+\begin{karte}{Eigenschaften Stieltjes'scher Inhalt}
+	Sei \( \mathcal{G} := \set{ (a,b] \;|\; a,b\in \R, a\leq b } \).
 	Es gilt 
 	\begin{enumerate}
 		\item \( \abb{F}{\R}{\R} \) ist monoton wachsend und beschränkt 
 		\( \Rightarrow \abb{\mu_f}{\mathcal{G}}{\R} \) mit 
 		\( \mu_F((a,b]) = F(b) - F(a) \) für \(a\leq b\) ist ein Inhalt.
 		\item Für \( \abb{F,G}{\R}{\R} \) gilt \( \mu_F = \mu_G \Leftrightarrow F - G\) ist konstant.
+		\item Sei \( \abb{F}{\R}{\R} \) monoton wachsend, \( \abb{\mu_F}{\mathcal{G}}{\R} \) der Stieltjes'sche Inhalt. Dann gilt 
+		\[ \mu_F \text{ ist ein Prämaß} \Leftrightarrow F \text{ ist rechtsseitig stetig.} \]
 	\end{enumerate}
 \end{karte}
-
-\begin{karte}{Eigenschaften Stieltjes'scher Inhalt}
-	Sei \( \abb{F}{\R}{\R} \) monoton wachsend, \( \abb{\mu_F}{\mathcal{G}}{\R} \) der Stieltjes'sche Inhalt. Dann gilt 
-	\[ \mu_f \text{ ist ein Prämaß} \Leftrightarrow F \text{ ist rechtsseitig stetig.} \]
-\end{karte}
-

@@ -1,6 +1,6 @@
 \section*{Eindeutigkeit von Maßen}
 
-\begin{karte}{Gleichheit von Maßen}
+\begin{karte}{Gleichheit von Maßen/- Lemma von Dynkin}
 	Sei \( \mathcal{E} \) ein \(\cap\)-stabiler Erzeuger einer \( \sigma \)-Algebra \( \mathcal{A} = \sigma(\mathcal{E}) \) 
 	in einer Menge \(X\), in welchem es eine Folge \( (E_n)_n \subset \mathcal{E} \) gibt mit 
 	\[ \bigcup_{n\in\N} E_n = X. \] 
@@ -11,19 +11,26 @@
 	\end{enumerate}
 	gleich, also \(\mu_1 = \mu_2\).
 \end{karte}
+
 \begin{karte}{\(\sigma\)-endlicher Inhalt}
 	Ein Inhalt \(\mu\) auf einem Halbring \( \mathcal{H} \) heißt 
 	\( \sigma \)-endlich, wenn es eine Folge \( (E_n)_n \subset \mathcal{H} \) gibt mit 
-	\( mu(E_n) < \infty \;\forall n\in\N\) und \( \bigcup_{n\in\N} E_n = X \).
+	\( \mu(E_n) < \infty \;\forall n\in\N\) und \( \bigcup_{n\in\N} E_n = X \).
 	Analog für Maße und Prämaße.
 \end{karte}
+
+\begin{karte}{Endlicher Inhalt}
+	Ein Inhalt \(\mu\) heißt endlich, falls \( \mu(A) < \infty \;\forall A\in \mathcal{R} \).
+\end{karte}
+
 \begin{karte}{Fortsetzung von Prämaßen}
 	Jedes \( \sigma \)-endliche Prämaß \(\abb{\mu}{\mathcal{H}}{[0,\infty]}\) auf einem Halbring 
 	\( \mathcal{H} \) in \(X\) kann auf genau eine Weise zu einem Maß auf 
 	\( \sigma(\mathcal{H}) \) fortgesetzt werden.\\
 	Dies trifft insbesondere auf das Lebesgue-Maß zu.
 \end{karte}
-\begin{karte}{Vergleichssatz}
+
+\begin{karte}{Vergleichslemma}
 	Sei \( \mathcal{H} \) ein Halbring in \(X, \abb{\mu, \nu}{\sigma(\mathcal{H})}{[0,\infty]} \) Maße mit 
 	\begin{enumerate}
 		\item \( \mu(A) \leq \nu(A) \;\forall A\in \mathcal{H} \)

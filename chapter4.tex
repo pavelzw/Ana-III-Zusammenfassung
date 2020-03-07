@@ -18,7 +18,7 @@
 	Das Tupel \( (X,\mathcal{A}) \) heißt \textit{Messraum} und wenn \(\mu\) ein 
 	Maß auf \(X\) (implizit auf \(\mathcal{A}\)), dann heißt \( (X, \mathcal{A}) \) 
 	oder \( (X, \mathcal{A}, \mu) \) \textit{Maßraum}.\\
-	Endlicher Maßraum = Wahrscheinlichkeits-Raum, wobei \(\mu \) endlich, wenn \( \mu(X) < \infty \). 
+	Endlicher Maßraum, wenn \( \mu(X) < \infty \). 
 	Ein endliches Maß ist ein Wahrscheinlichkeits-Maß, falls \(\mu(X) = 1\).
 \end{karte}
 
@@ -39,7 +39,7 @@
 		\item \(\mu(\emptyset) = 0\)
 		\item \( \mu(A\cup B) = \mu(A) + \mu(B) \;\forall A,B\in \mathcal{A}, A\cap B = \emptyset \)
 		\item \begin{itemize}
-			\item Stetigkeit von unten Für jede wachsende Folge \( (A_n)_n \subset \mathcal{A} \) mit \(A = \limes{n} A_n\) gilt \(\mu(A) = \limes{n} \mu(A_n) = \sup\limits_{n\in\N} \mu(A_n) \).
+			\item Stetigkeit von unten: Für jede wachsende Folge \( (A_n)_n \subset \mathcal{A} \) mit \(A = \limes{n} A_n\) gilt \(\mu(A) = \limes{n} \mu(A_n) = \sup\limits_{n\in\N} \mu(A_n) \).
 			\item Stetigkeit von oben: Für jede fallende Folge \( (A_n)_n \subset \mathcal{A} \) mit \(A = \limes{n} A_n\) gilt \(\mu(A) = \limes{n} \mu(A_n) = \inf\limits_{n\in\N} \mu(A_n) \).
 			\item Stetigkeit in \(\emptyset\): Für jede fallende Folge \( (A_n)_n \subset \mathcal{A} \) mit \( A = \limes{n} A_n = \emptyset \) gilt \( \mu(A) = 0 \).
 		\end{itemize}
@@ -64,7 +64,7 @@
 
 \begin{karte}{Maß von disjunkten Folgen}
 	Sei \(\mu\) ein Maß auf der \(\sigma\)-Algebra \(\mathcal{A}\) und \( (A_n)_n \subset \mathcal{A} \) 
-	und es gelte \( \exists k\in \N: A_m \cap A_n = \emptyset \forall m,n: \abs{m-n}\geq k \). Dann gilt 
+	und es gelte \( \exists k\in \N: A_m \cap A_n = \emptyset \;\forall m,n: \abs{m-n}\geq k \). Dann gilt 
 	\[ \sum_{n=1}^{\infty} \mu(A_n) \leq k \cdot \mu \left( \bigcup_{n=1}^\infty A_n \right). \]
 	Der Fall \(k = 1\) ist äquivalent zur \(\sigma\)-Additivität von \(\mu\).
 \end{karte}

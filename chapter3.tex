@@ -16,14 +16,14 @@
 	Sei \(\mathcal{A}\) eine \(\sigma\)-Algebra in \(X\). Dann gilt 
 	\begin{enumerate}
 		\item \(\emptyset \in \mathcal{A}\).
-		\item \( A_1, \ldots, A_n \in \mathcal{A}\Rightarrow \bigcup_{j=1}^n A_j \in A \) (stabil unter endlicher Vereinigung)
+		\item \( A_1, \ldots, A_n \in \mathcal{A}\Rightarrow \bigcup_{j=1}^n A_j \in \mathcal{A} \) (stabil unter endlicher Vereinigung)
 		\item \( (A_n)_n \subset \mathcal{A} \Rightarrow \bigcap_{n\in\N} A_n \in \mathcal{A} \) (stabil unter abzählbarem Schnitt)
 	\end{enumerate}
 \end{karte}
 
 \begin{karte}{Spur-\(\sigma\)-Algebra}
 	Sei \(\mathcal{A} \subset \mathcal{P}(X)\) eine \(\sigma\)-Algebra und \(\tilde{X} \subset X\) 
-	\( \Rightarrow \tilde{A} := \set{ A \cap \tilde{X} \;\vert\; A \in \mathcal{A} } \) ist eine 
+	\( \Rightarrow \tilde{\mathcal{A}} := \set{ A \cap \tilde{X} \;\vert\; A \in \mathcal{A} } \) ist eine 
 	\(\sigma\)-Algebra in \(\tilde{X}\).
 \end{karte}
 
@@ -32,6 +32,7 @@
 	\((\mathcal{A}_j)_{j\in J}\) eine beliebige Familie von 
 	\(\sigma\)-Algebren in einer Menge \(X\).
 	\[ \Rightarrow \mathcal{A} = \bigcap_{j\in J} \mathcal{A}_j \text{ ist eine \(\sigma\)-Algebra in } X. \]
+	Für \( \bigcup_{j\in J}\mathcal{A}_j  \) gilt dies nicht.
 \end{karte}
 
 \begin{karte}{Erzeugte \(\sigma\)-Algebra}
@@ -54,7 +55,7 @@
 	Dann gilt \( \mathcal{B}(\R^d) = \sigma(\mathcal{O}^d) = \sigma(\mathcal{C}^d) = \sigma(\mathcal{K}^d) \).
 \end{karte}
 
-\begin{karte}{Mengensysteme}
+\begin{karte}{Quader als Erzeuger für Borel-Algebra}
 	Es seien \( J := J^d = J(\R^d) := \set{ [a_1,b_1) \times \cdots \times [a_d,b_d) \;|\; a_j, b_j \in \R } \) offene und halboffene Quader.
 	Und \( J_\Q^{O,d} := \set{(a,b) \;|\; a,b\in \Q^d}, J_\Q^d := \set{ [a,b) \;|\; a,b\in \Q^d } \). Analog \(J^{O,d}\) mit reellen Grenzen. \\
 	Es gilt 

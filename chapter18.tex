@@ -2,14 +2,14 @@
 
 \begin{karte}{\(N_p\)}
 	Wir definieren die Abbildung 
-	\[ N_p(f) := (\int \abs{f}^p \dmu)^{1/p} \text{ für } 0 < p < \infty, \]
+	\[ N_p(f) := \left(\int \abs{f}^p \dmu\right)^{1/p} \text{ für } 0 < p < \infty, \]
 	\[ N_\infty(f) := \inf \set{ k > 0 : \abs{f} < k \text{ fast überall} }. \]
+	\(N_p(\cdot)\) bildet eine Pseudonorm.
 \end{karte}
 
 \begin{karte}{\(p\)-fach \(\mu\)-integrierbar}
-	Eine Abbildung \( \abb{f}{X}{\bar{R}} \) heißt \(p\)-fach \(\mu\)-integrierbar, falls 
-	\(f\) messbar und \( \abs{f}^p \) \( \mu \)-integrierbar ist.\\
-	Äquivalent \(f\) ist messbar \( \Leftrightarrow N_p(f) < \infty \).
+	Eine Abbildung \( \abb{f}{X}{\bar{\R}} \) heißt \(p\)-fach \(\mu\)-integrierbar, falls 
+	\(f\) messbar und \( \abs{f}^p \) \( \mu \)-integrierbar ist (\( \Leftrightarrow N_p(f) < \infty \)).
 \end{karte}
 
 \begin{karte}{Menge aller \(p\)-fach \(\mu\)-integrierbarer Funktionen}
@@ -17,12 +17,13 @@
 	Die Räume \( \mathcal{L}_\mathbb{K}^p 
 	= \mathcal{L}_\mathbb{K}^p(X, \mathcal{A}, \mu) := \set{\abb{f}{X}{\mathbb{K}} \;|\; 
 	f \text{ messbar, } N_p(f) < \infty } \) nennen wir die Menge aller \(p\)-fach \(\mu\)-integrierbaren Funktionen.
+	\( \mathcal{L}_{\mathbb{K}}^p \) bildet einen Vektorraum.
 \end{karte}
 
 \begin{karte}{Youngsche Ungleichung}
 	Es seien \( p,q\in (1,\infty) \) duale Koeffizienten, d. h. 
 	\( 1 = \frac{1}{p} + \frac{1}{q} \). \\
-	Dann gilt \( A \cdot B \leq \frac{A^p}{p} + \frac{B^p}{p} 
+	Dann gilt \( A \cdot B \leq \frac{A^p}{p} + \frac{B^q}{q} 
 	\;\forall A,B\geq 0 \).
 \end{karte}
 
@@ -33,7 +34,7 @@
 	\( g \in \mathcal{L}^q \) und 
 	\( \abb{f \cdot g}{X}{\mathbb{K}}, x \mapsto f(x) \cdot g(x) \) das punktweise Produkt.\\
 	Dann gilt \( f\cdot g \in \mathcal{L}^1 \) und 
-	\[ \abs{ \int f \cdot f \dmu } \leq \int \abs{f \cdot g} \dmu \leq N_p(f) N_q(g). \]
+	\[ \abs{ \int f \cdot g \dmu } \leq \int \abs{f \cdot g} \dmu \leq N_p(f) N_q(g). \]
 \end{karte}
 
 \begin{karte}{Minkowski-Ungleichung oder \( \Delta \)-Ungleichung für \( \mathcal{N}_p \)}
@@ -41,9 +42,6 @@
 	\( \mathcal{N}_p(f+g) \leq \mathcal{N}_p(f) + \mathcal{N}_p(g) \).\\
 	Im Fall der Gleichheit für \( 1 < p < \infty \) existiert ein \(\lambda > 0\) 
 	mit \( g = \lambda f \) oder \( f = \lambda g \) \(\mu\)-fast überall.
-\end{karte}
 
-\begin{karte}{\( \mathcal{L}^1 \subset \mathcal{L}^p \)}
-	Sei \( (X,\mathcal{A}, \mu) \) ein Maßraum und \( \mu(X) < \infty 
-	\Rightarrow \mathcal{L}^1 \subset \mathcal{L}^p \;\forall 1 \leq p \leq \infty \). 
+	Umgekehrte \(\Delta\)-Ungleichung: \[ ||f-g||_{L^p} \geq |\; ||f||_{L^p} - ||g||_{L^p}\; |. \]
 \end{karte}

@@ -12,10 +12,10 @@
     äquivalent:
     \begin{enumerate}
         \item \(M\) ist eine \(k\)-dimensionale Untermannigfaltigkeit.
-        \item Niveaumengenkriterium: zu \(p\in M \exists \) affine \(W\subset \R^n, 
+        \item Niveaumengenkriterium: zu \(p\in M \exists \) offenes \(W\subset \R^n, 
         h \in \mathcal{C}^1(W, \R^{n-k}): \rk Dh = n-k, M\cap W = \set{q\in W \;|\; h(q) = 0} \).
         \item Graphenkriterium: zu \(p\in M\) gibt es, nach Umnummerierung der 
-        Koordinaten, eine offene Umgebung \( U \times V \subset \R^k \times \R^{n\times k} \)
+        Koordinaten, eine offene Umgebung \( U \times V \subset \R^k \times \R^{n- k} \)
         und \( u\in \mathcal{C}^1(U,V): M\cap (U\times V) = \set{(x,u(x)) \;|\; x\in U} \).
     \end{enumerate}
 \end{karte}
@@ -26,12 +26,12 @@
 \end{karte}
 
 \begin{karte}{Karte und Atlas}
-    Sei \( M \) eine \(k\)-dimensionale Untermannigfaltigkeit von \(\R^k\). 
+    Sei \( M \) eine \(k\)-dimensionale Untermannigfaltigkeit von \(\R^n\). 
     
-    Karte: Sei \( k = 1,\ldots, n \). 
-    Das Paar \( (\varphi, U) \) heißt Karte (für \(M\)), falls \( U \subset \R^k \) offen.
-    Immersion ist \( \varphi \in \mathcal{C}^1(U, \R^k) \) mit \( \varphi(U) \subset M, 
-    \abb{\varphi}{U}{\varphi(U)} \) Homöomorphismus (auch lokale Parametrisierung).
+    Karte: Sei \( \varphi \in \mathcal{C}^1(U, \R^n) \) mit \( \varphi(U) \subset M, 
+    \abb{\varphi}{U}{\varphi(U)} \) ein Homöomorphismus.
+    Das Paar \( (\varphi, U) \) heißt Karte (für \(M\)), falls \( U \subset \R^k \) offen und
+    \( \varphi \) eine Immersion ist (\(D_\varphi\) hat vollen Rang) (auch lokale Parametrisierung).
 
     Eine Familie \( (\varphi_\alpha, U_\alpha)_{\alpha\in A} \) von Karten 
     heißt Atlas, falls \( \bigcup_{\alpha \in A} \varphi_\alpha(U_\alpha) = M \) ist. 

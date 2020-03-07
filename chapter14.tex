@@ -2,17 +2,17 @@
 
 \begin{karte}{\( \mu \)-integrierbar}
 	Sei \( (X, \mathcal{A}, \mu) \) ein Maßraum. Eine numerische Funktion 
-	\( \abb{f}{X}{\bar{R}} \) heißt \(\mu\)-integrierbar, falls sie 
+	\( \abb{f}{X}{\bar{\R}} \) heißt \(\mu\)-integrierbar, falls sie 
 	\( \mathcal{A} \)-messbar ist und die Integrale \( \int f^- \dmu, \int f^+ \dmu \) 
 	reelle Zahlen sind. Dann heißt 
-	\[ \int f \dmu := \int f^- \dmu + \int f^+ \dmu \]
+	\[ \int f \dmu := \int f^+ \dmu - \int f^- \dmu \]
 	das \( \mu \)-Integral von \( f \) auf \(X\).\\
 	Die rechte Seite ist wohldefiniert, falls mind. einer der Terme \( \int f^+ \dmu \) oder 
 	\( \int f^- \dmu \) endlich sind. Man sagt dann, \(f\) ist quasi integrierbar oder 
 	das Integral von \(f\) existiert.
 	Wir schreiben auch 
-	\( \int f(x) \dmu(x) \) oder \( \int f(x) \mu(\dx{x}) \). \\
-	Ist \( f \geq 0 \Rightarrow f^{-1} \equiv 0 \Rightarrow \int f \dmu\) ist konstand mit dem Integral von 
+	\( \int f(x) \dmu(x) \) oder \( \int f(x) \mu(\mathrm{d}x) \). \\
+	Ist \( f \geq 0, f^- \equiv 0 \Rightarrow \int f \dmu\) ist konstant mit dem Integral von 
 	\( f\in \mathcal{M}^+ \).
 \end{karte}
 

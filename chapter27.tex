@@ -1,12 +1,12 @@
 \section*{Integration Untermannigfaltigkeiten}
 
-\begin{karte}{}
+\begin{karte}{Zerlegung der Eins}
     Zerlegung der Eins: 
     \[ \abb{h_\alpha}{M}{\R}, p \mapsto \frac{\mathds{1}_{\varphi_\alpha(U_\alpha)}(p) }{ \sum_{\beta \in A} \mathds{1}_{ \varphi_\beta (U_\beta) }(p) }, \quad p\in M \]
 
     Es seien 
     \begin{enumerate}
-        \item \( \zeta_k(M) := \zeta_k = \set{ E \subset M: (E_{\varphi_\alpha}(U_\alpha))^{-1} \text{ Borelmessbare Menge in } \R^k } \)
+        \item \( \zeta_k(M) := \zeta_k = \set{ E \subset M: (\varphi_\alpha^{-1}((E\cap \varphi_\alpha(U_\alpha))) \text{ Borelmessbare Menge in } \R^k } \)
         \item \( S_M^k := S^k(E) = \sum_{\alpha \in A} \int_{U_\alpha} (h_\alpha \mathds{1}_E) 
         \circ \varphi_\alpha(\det D \varphi_\alpha^t D \varphi_\alpha)^{1/2} \dx{\lambda^k} \).
     \end{enumerate}
@@ -15,16 +15,16 @@
     \begin{enumerate}
         \item \( \zeta_k(M) \) ist eine \(\sigma\)-Algebra.
         \item \( \abb{S_M^k}{\zeta_k(M)}{[0,\infty]} \) ist ein Maß.
-        \item Die Definition von \( \zeta_k(M) \) und \( S_M^k \) ist unabhängig von der Wahl des Atlas.
+        \item Die Definition von \( \zeta_k(M) \) und \( S_M^k \) ist unabhängig von der Wahl des Atlas'.
     \end{enumerate}
 \end{karte}
 
 \begin{karte}{Integral bzgl. \( \zeta_k \) und \( S_M^k \)}
-    \( \abb{f}{M}{\bar{R}} \) ist integrierbar über \(M\), falls 
+    \( \abb{f}{M}{\bar{\R}} \) ist integrierbar über \(M\), falls 
     \[ \int_M \abs{f} \dx{S_M^k} < \infty. \]
 
     Das Integral ist dann definiert als 
-    \[ \int_M f \dx{S_M^k} := \sum_{\alpha\in A} \int_{U_\alpha} f\circ \varphi_\alpha (\det D^t_{\varphi_\alpha} \det D_{\varphi_\alpha})^{1/2} \dx{\lambda^k}. \]
+    \[ \int_M f \dx{S_M^k} := \sum_{\alpha\in A} \int_{U_\alpha} f(\varphi_\alpha(t)) \cdot (\det (D^T_{\varphi_\alpha}  D_{\varphi_\alpha}))^{1/2} \lambda^k(\mathrm{d}t). \]
 \end{karte}
 
 \begin{karte}{Ähnlichkeitssatz}
@@ -56,6 +56,9 @@
     der Punkte \(x \in \partial A\), für die es \( p > 0 \) und \( G \in \mathcal{C}^1(B_p(x)) \) gibt, 
     sodass überall \( DG \neq 0 \) gilt sowie 
     \[ A \cap B_{p}(x) = G^{-1}((-\infty,0)). \]
+
+    Innen ist \(G < 0\), außen ist \(G>0\) und auf dem Rand ist \(G = 0\).
+
     \(A\) heißt \(\mathcal{C}^1\)-berandet, falls \( \partial A = \partial_r A \).
 
     Es gilt \( \partial_r A \cap B_p (x) = G^{-1}(\set{0}) \).
@@ -66,9 +69,9 @@
     \( \nu(x) \in \R^n \) mit 
     \begin{enumerate}
         \item \(\abs{\nu(x)} = 1\).
-        \item \( \nu(x) \bot T_x(\partial_r A)^\bot, x \in \partial_r A \).
+        \item \( \nu(x) \bot T_x(\partial_r A), x \in \partial_r A \).
         \item \( \forall x \in \partial_r A \) gibt es \( \varphi > 0 \):
-        \[ x + t\nu(x) \in A \;\forall \varphi < t < 0 \qquad x + tc(x) \notin A \;\forall 0 < t < \varphi \]
+        \[ x + t\nu(x) \in A \;\forall -\varphi < t < 0 \qquad x + tc(x) \notin A \;\forall 0 < t < \varphi \]
     \end{enumerate}
     \( \nu(x) = \frac{\nabla G(x)}{ \abs{ \nabla G(x) }} \) erfüllt dies.
 \end{karte}

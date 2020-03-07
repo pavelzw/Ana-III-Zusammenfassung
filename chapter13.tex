@@ -13,7 +13,7 @@
 \begin{karte}{\( \mathcal{M}^+ \)}
 	\( \mathcal{M}^+ := \mathcal{M}^+(X, \mathcal{A}) 
 	= \set{f \;|\; f \geq 0, \text{ es gibt eine wachsende Folge } (u_n)_n \subset E^+ 
-	\text{ mit } f = \sup_{n\in\N} u_n. } \). Also alle numerischen Funktionen, für die es eine wachsende Folge im Supremum gibt.
+	\text{ mit } f = \sup_{n\in\N} u_n } \). Also alle numerischen Funktionen, für die es eine wachsende Folge im Supremum gibt.
 	Es gilt für \( \sup_{n\in\N} u_n = f\in \mathcal{M}^+: \int f \dmu = \sup_{n\in\N} \int u_n \dmu \).\\
 	Alle messbaren numerischen Funktionen \( f \geq 0 \) auf \(X\) sind in \( \mathcal{M}^+ \).
 \end{karte}
@@ -44,9 +44,9 @@
 
 \begin{karte}{Satz von der monotonen Konvergenz (Beppo Levi)}
 	Sei \( (f_n)_n \subset \mathcal{M}^+ \) eine wachsende Folge
-	\( \Rightarrow \sup_{n\in\N} f_n \in \mathcal{M} \) und 
-	\( \int \sup_{n\in\N} f_n \dmu 
-	= \sup_{n\in\N} \int f_n \dmu \).\\
+	\[ \Rightarrow \sup_{n\in\N} f_n \in \mathcal{M}^+ \] und 
+	\[ \int \sup_{n\in\N} f_n \dmu 
+	= \sup_{n\in\N} \int f_n \dmu. \]
 	Alternative Formulierung: 
 	\( \int \limes{n} f_n \dmu 
 	= \limes{n} \int f_n \dmu \).
@@ -62,6 +62,9 @@
 	Sei \( (f_n)_n \subset \mathcal{M}^+ \). Dann gilt 
 	\[ \limesinf{n} f_n \in \mathcal{M}^+ 
 	\text{ und } \int \limesinf{n} f_n \dmu \leq \limesinf{n} \int f_n \dmu. \]
+
+	Mit \(\limsup\): Es gelte \( f_n \leq g \) für eine integrierbare Majorante. 
+	\[ \int_X \limessup{n} f_n \dmu \geq \limessup{n} \int_X f_n \dmu. \]
 \end{karte}
 
 \begin{karte}{\(\limesinf{n}\) und \( \limessup{n} \) von Mengenfolgen}
